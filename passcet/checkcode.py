@@ -44,7 +44,12 @@ def chenkemail(id, code):
     print(queryDB.exists()) #  存在值T 不存在F
     if queryDB.exists():
         print('在数据库里查询到了结果')
-    for i in queryDB:
-        print(i.code)
-        print('id'+str(i.id))
-    return HttpResponse("nsumic")
+        for i in queryDB:
+            print("loop start")
+            if i.code == code:
+                print('code == code')
+                return HttpResponse('{"status": "ok"')
+            else:
+                return HttpResponse('what???')
+    else:
+        return HttpResponse('what happen??')
