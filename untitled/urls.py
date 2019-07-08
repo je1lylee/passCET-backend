@@ -20,6 +20,7 @@ from . import heart_beat
 import passcet.isrunning
 import passcet.register
 import passcet.checkcode
+import passcet.addaccount
 
 from untitled import function
 urlpatterns = [
@@ -30,5 +31,6 @@ urlpatterns = [
     path('heartbeat/' ,passcet.isrunning.home),
     path('register/',passcet.register.register),
     path('checkcode/',passcet.checkcode.checkcode),
+    path('addaccount/',passcet.addaccount.addaccount),
 
 ]
