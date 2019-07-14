@@ -50,6 +50,7 @@ def sendSMS(phoneNumber):
 def sendMail(emailAddress):
     # 处理发邮件的逻辑 返回发送状态
     #生成两个随机数，一个作为ID一个作为Code 加上时间戳 10min 就是10*60=600 sec
+    # 这里可能需要编写一个经常运行的程序来保证验证码表在凌晨两点进行清空
     curlTime = time.time()
     id = random.randint(100000,999999)
     code = random.randint(100000,999999)
