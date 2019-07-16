@@ -24,7 +24,7 @@ SECRET_KEY = 'g0w1&v1e1@p98@w_i+020j0r2ax-x4&@ik2siu^d3zc746^o10'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+#全局静态变量
 ALLOWED_HOSTS = ['*']
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = False   #是否使用TLS安全传输协议(用于在两个通信应用程序之间提供保密性和数据完整性。)
@@ -33,8 +33,7 @@ EMAIL_HOST = 'smtp.163.com'   #发送邮件的邮箱 的 SMTP服务器，这里�
 EMAIL_PORT = 465     #发件箱的SMTP服务器端口
 EMAIL_HOST_USER = 'passcetapp@163.com'    #发送邮件的邮箱地址
 EMAIL_HOST_PASSWORD = '163passcet'         #发送邮件的邮箱密码(这里使用的是授权码)
-MEDIA_ROOT = 'media/' #图片存哪里
-MEDIA_URL = 'media/'
+SERVER_BASE_URL = '112.74.184.181:8000/'
 # Application definition
 # 注册app
 INSTALLED_APPS = [
@@ -128,3 +127,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+IMG_ROOT = os.path.join(BASE_DIR,'static\\img\\')

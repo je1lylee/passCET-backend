@@ -3,6 +3,9 @@ import time
 import random
 import passcet.models
 import os
+import hashlib
+import filetype
+from django.conf import settings
 # Author:NsuMicClub-Liguodong
 
 # 只有在验证码验证成功的时候才可以调用，这个方法就直接往数据库里写信息了
@@ -12,37 +15,45 @@ def addaccount(request):
     token = request.POST.get('token')
     phone = request.POST.get('phone')
     email = request.POST.get('email')
+    image = request.FILES.get('image')
     leavel = 0
-    if token == 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW' and (phone != None or email != None) and name != None:
+    print(storagePic(request))
+    if token == 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW' and (phone != None or email != None) and name != None and image != None:
         rtime = time.time()  # Unix时间戳
+        md5 = storagePic(request)
         if (phone != None):
-            return viaPhone(phone, leavel, rtime,name)
+            return viaPhone(phone, leavel, rtime,name,md5)
         else:
-            return viaEmail(email, leavel, rtime,name)
+            return viaEmail(email, leavel, rtime,name,md5)
     else:
         return HttpResponse('{"status":"error"}')
-
-
-def viaPhone(phone, leavel, registerTime,name):
+def viaPhone(phone, leavel, registerTime,name,md5):
     if len(passcet.models.passcet_user.objects.filter(phone__exact=phone)) == 0: #判断库里是不是已经有了相同的信息
-        passcet.models.passcet_user.objects.create(phone=phone,leavel=leavel,registertime=registerTime,name=name)
+        passcet.models.passcet_user.objects.create(phone=phone,leavel=leavel,registertime=registerTime,name=name,img_md5=md5)
         return HttpResponse('{"status": "rigister_success"}')
     else:
         return HttpResponse('{"status":"already_exists"}')
 
-def viaEmail(email, leavel, registerTime,name):
+def viaEmail(email, leavel, registerTime,name,md5):
     if len(passcet.models.passcet_user.objects.filter(email__exact=email)) == 0: #判断库里是不是已经有了相同的信息
-        passcet.models.passcet_user.objects.create(email=email,leavel=leavel,registertime=registerTime,name=name)
+        passcet.models.passcet_user.objects.create(email=email,leavel=leavel,registertime=registerTime,name=name,img_md5=md5)
         return HttpResponse('{"status": "rigister_success"}')
     else:
         return HttpResponse('{"status":"already_exists"}')
 
-def storagePic(request,phone,email):
+def storagePic(request):
     img_file = request.FILES.get('image')
-    if email == None:
-        file_name = phone+time.time()+''
+    md5ob = hashlib.md5()
+    for chunk in img_file.chunks():#计算md5
+        md5ob.update(chunk)
+    md5 = md5ob.hexdigest()
+    # 在数据库中完全匹配搜索MD5
+    if len(passcet.models.passcet_user.objects.filter(img_md5__exact=md5)) ==0:
+        print('直接写磁盘，并返回MD5')
+        fname = settings.IMG_ROOT+md5+'.jpeg'
+        with open(fname,'wb') as pic:
+            for c in img_file.chunks():
+                pic.write(c)
     else:
-        file_name = email+time.time()+''
-    f = open(os.path.join('img/',file_name),'wb')
-    for chunk in img_file.chunks(chunk_size=1024):
-        f.write(chunk)
+        print('数据库里有，直接写库')
+    return md5
