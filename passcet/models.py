@@ -11,9 +11,12 @@ class passcet_user(models.Model):
     logintime = models.IntegerField(null=False,default=0) #最后一次登录时间，为了保持登录状态
     registertime = models.IntegerField(null=False,default=0) # 注册时间
     lastimei = models.IntegerField(null=True,default=0) #最后一次登录的设备特征号
-
+    def __str__(self):
+        return self.name
 #邮箱验证码
 class passcet_emailcode(models.Model):
     id = models.IntegerField(primary_key=True)
     code = models.IntegerField()
     time = models.FloatField(default=0)
+    def __str__(self):
+        return str(self.id)
