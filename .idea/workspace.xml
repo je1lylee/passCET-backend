@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/addaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/addaccount.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/passcet/addaccount.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+            <state relative-caret-position="592">
+              <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -56,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/passcet/register.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-110">
+            <state relative-caret-position="440">
               <caret line="20" column="14" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="14" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -68,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/untitled/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="2530">
+              <caret line="115" selection-start-line="115" selection-end-line="115" />
             </state>
           </provider>
         </entry>
@@ -82,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/passcet/checkcode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="638">
               <caret line="29" column="35" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="35" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -134,11 +131,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="696" />
-    <option name="y" value="88" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="377" />
+    <option name="y" value="134" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="1076" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -154,6 +151,11 @@
             <path>
               <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="passcet" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -273,22 +275,23 @@
       <workItem from="1563178842423" duration="6158000" />
       <workItem from="1563200783443" duration="4541000" />
       <workItem from="1563270736940" duration="11145000" />
+      <workItem from="1563361903488" duration="3719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133019000" />
+    <option name="totallyTimeSpent" value="136738000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <frame x="377" y="134" width="974" height="1076" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09488273" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19693655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20173536" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19532908" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -496,33 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/passcet/checkcode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passcet/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passcet/register.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/hashlib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -537,23 +513,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/ba794cd2c5aabecde162da244fd8afb4.jpeg">
+    <entry file="file://$PROJECT_DIR$/static/img/6f3f903625703019a44c6632f7e3de45.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="2530">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/6f3f903625703019a44c6632f7e3de45.jpeg">
+    <entry file="file://$PROJECT_DIR$/static/img/ba794cd2c5aabecde162da244fd8afb4.jpeg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/passcet/checkcode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/passcet/register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/passcet/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/passcet/addaccount.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+        <state relative-caret-position="592">
+          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>

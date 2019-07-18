@@ -16,10 +16,12 @@ def addaccount(request):
     phone = request.POST.get('phone')
     email = request.POST.get('email')
     image = request.FILES.get('image')
-    leavel = 0
-    print(storagePic(request))
+    leavel = request.POST.get('leavel')
+    if leavel == None:
+        leavel = 0
     if token == 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW' and (phone != None or email != None) and name != None and image != None:
         rtime = time.time()  # Unix时间戳
+        print(leavel)
         md5 = storagePic(request)
         if (phone != None):
             return viaPhone(phone, leavel, rtime,name,md5)
