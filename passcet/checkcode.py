@@ -45,9 +45,10 @@ def chenkemail(id, code):
     if queryDB.exists():
         print('在数据库里查询到了结果')
         for i in queryDB:
-            if str(i.code) == str(code):
+            if str(i.code) == str(code) and time.time()-i.time <= 600:
                 return HttpResponse('{"status": "ok"}')
             else:
+                print(time.time()-i.time)
                 return HttpResponse('{"status": "code-error"}')
     else:
         return HttpResponse('{"status":"no-data"}')
