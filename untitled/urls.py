@@ -21,6 +21,8 @@ import passcet.isrunning
 import passcet.register
 import passcet.checkcode
 import passcet.addaccount
+import passcet.getusericon
+from django.views.static import serve
 
 from untitled import function
 urlpatterns = [
@@ -32,5 +34,7 @@ urlpatterns = [
     path('register/',passcet.register.register),
     path('checkcode/',passcet.checkcode.checkcode),
     path('addaccount/',passcet.addaccount.addaccount),
+    path('getusericon/',passcet.getusericon.getusericon),
+    path(r'^medias/(?P<path>.*)$', serve, {'document_root': '真实文件的目录/static/images'}),
 
 ]
