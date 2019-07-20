@@ -1,0 +1,9 @@
+URL：http://112.74.184.181:8000/getusericon/
+方法：POST
+参数
+token:令牌
+id:用户id
+返回值说明：
+{"status":"token-error"}  : token错误
+{"status":"no-data"} : 数据库里有用户信息，但是没有找到对应的图像或者数据库里没用用户信息
+一张图 ：数据库里存在用户信息，而且图存在

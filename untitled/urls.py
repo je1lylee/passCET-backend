@@ -35,6 +35,4 @@ urlpatterns = [
     path('checkcode/',passcet.checkcode.checkcode),
     path('addaccount/',passcet.addaccount.addaccount),
     path('getusericon/',passcet.getusericon.getusericon),
-    path(r'^medias/(?P<path>.*)$', serve, {'document_root': '真实文件的目录/static/images'}),
-
 ]

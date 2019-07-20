@@ -1,4 +1,4 @@
-URL:http://112.74.184.181:8000/addaccount
+URL:http://112.74.184.181:8000/addaccount/
 请求方式：POST
 参数：token 令牌
 name 用户昵称
