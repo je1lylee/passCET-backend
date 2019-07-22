@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 import time
 from passcet import models
+# author : NsuMicClub:Liguodong
 def loginstatuscheck(request):
     token = request.POST.get('token')
     id = request.POST.get('id')

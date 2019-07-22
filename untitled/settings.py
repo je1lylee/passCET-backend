@@ -34,6 +34,7 @@ EMAIL_PORT = 465     #发件箱的SMTP服务器端口
 EMAIL_HOST_USER = 'passcetapp@163.com'    #发送邮件的邮箱地址
 EMAIL_HOST_PASSWORD = '163passcet'         #发送邮件的邮箱密码(这里使用的是授权码)
 SERVER_BASE_URL = '112.74.184.181:8000/'
+PASSCET_TOKEN = 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW'
 # Application definition
 # 注册app
 INSTALLED_APPS = [
