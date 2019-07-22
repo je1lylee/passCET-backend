@@ -1,0 +1,8 @@
+URL：http://112.74.184.181:8000/loginstatuscheck/
+参数：
+token令牌
+id用户的id
+imei手机的IMEI码
+三者缺一不可
+返回值：
+请参看全局返回码
