@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from passcet import models
+from passcet import settingfile as SF
 def getusericon(request):
     # Author: NsuMicClub:Liguodong
     """
     通过POST获取用户的id号并返回一张图片
     """
-    if(request.POST.get('token')!= None and request.POST.get('token') == 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW'):
+    if(request.POST.get('token')!= None and request.POST.get('token') == SF.PASSCET_TOKEN):
         id = request.POST.get('id')
         imageid = models.passcet_user.objects.filter(id=id)
         if len(imageid) != 0:

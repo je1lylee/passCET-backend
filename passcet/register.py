@@ -6,6 +6,7 @@ import requests
 import time
 import random
 import passcet.models
+from passcet import settingfile as SF
 #Author :NsuMicClub-Liguodong
 # URL register/?token= & phone = & email = //token必填 phone和email任选一个即可
 # 传入参数 email或者是phone 判断如果email或者是phone重复就返回错误
@@ -17,7 +18,7 @@ def register(request):
     token = request.GET.get('token')
     if phone == None and email == None :
         return HttpResponse('参数缺失！')
-    if token == 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW':  # 对token进行验证 如果正确才执行逻辑
+    if token == SF.PASSCET_TOKEN:  # 对token进行验证 如果正确才执行逻辑
         username = passcet_user.objects.all()  # 从数据库中拿到集合
         for usernames in username:#轮询没问题后再执行发送相关的逻辑
             if request.GET.get('email') == usernames.email or request.GET.get('phone') == str(usernames.phone):

@@ -6,6 +6,7 @@ import os
 import hashlib
 import filetype
 from django.conf import settings
+from passcet import settingfile as SF
 # Author:NsuMicClub-Liguodong
 
 # 只有在验证码验证成功的时候才可以调用，这个方法就直接往数据库里写信息了
@@ -19,7 +20,7 @@ def addaccount(request):
     leavel = request.POST.get('leavel')
     if leavel == None:
         leavel = 0
-    if token == 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW' and (phone != None or email != None) and name != None and image != None:
+    if token == SF.PASSCET_TOKEN and (phone != None or email != None) and name != None and image != None:
         rtime = time.time()  # Unix时间戳
         print(leavel)
         md5 = storagePic(request)

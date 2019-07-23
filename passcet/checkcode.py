@@ -4,13 +4,14 @@ import json
 import requests
 import time
 import passcet.models
+from passcet import settingfile as SF
 #author: NsuMicClub-Liguodong
 def checkcode(request):
     token = request.GET.get('token')
     phoneNumber = request.GET.get('phone')
     id = request.GET.get('id')
     code = request.GET.get('code')
-    if token == 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW' and code != None:
+    if token == SF.PASSCET_TOKEN and code != None:
         if (phoneNumber != None):
             return checkPhone(phoneNumber, code)
         elif (id != None):
