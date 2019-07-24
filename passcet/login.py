@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from passcet import checkcode
+from passcet import models
 from passcet import settingfile as SF
 def login(request):
     token = request.POST.get('token')
@@ -8,8 +9,12 @@ def login(request):
     email = request.POST.get('email')
     if token != SF.PASSCET_TOKEN and token != None:
         if type != None and (phone!=None or email != None):
-            if type == 0:
-                print()
+            if type == 0: #用户是否存在
+                if phone != None:
+                    # 处理
+                    print()
+                else:
+                    print()
             elif type == 1:
                 print()
             else:
