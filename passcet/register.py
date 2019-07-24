@@ -57,5 +57,8 @@ def sendMail(emailAddress):
     code = random.randint(100000,999999)
     #需要存入数据库并在验证方法中进行验证
     passcet.models.passcet_emailcode.objects.create(id=id,code=code,time=curlTime)
-    send_mail('PassCET-验证邮件','您的验证码是['+str(code)+']，有效期10分钟。如非本人操作,请忽略.','passcetapp@163.com',[emailAddress] ,fail_silently=False)
-    return HttpResponse('{"id":"'+str(id)+'"}')
+    try:
+        send_mail('PassCET-验证邮件','您的验证码是['+str(code)+']，有效期10分钟。如非本人操作,请忽略.','passcetapp@163.com',[emailAddress] ,fail_silently=False)
+        return HttpResponse('{"id":"'+str(id)+'"}')
+    except:
+        return HttpResponse(SF.PASSCET_EMAIL_SEND_FAILED)
