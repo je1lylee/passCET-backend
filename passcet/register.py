@@ -7,6 +7,7 @@ import time
 import random
 import passcet.models
 from passcet import settingfile as SF
+import traceback
 #Author :NsuMicClub-Liguodong
 # URL register/?token= & phone = & email = //token必填 phone和email任选一个即可
 # 传入参数 email或者是phone 判断如果email或者是phone重复就返回错误
@@ -56,9 +57,10 @@ def sendMail(emailAddress):
     id = random.randint(100000,999999)
     code = random.randint(100000,999999)
     #需要存入数据库并在验证方法中进行验证
-    passcet.models.passcet_emailcode.objects.create(id=id,code=code,time=curlTime)
     try:
+        passcet.models.passcet_emailcode.objects.create(id=id,code=code,time=curlTime)
         send_mail('PassCET-验证邮件','您的验证码是['+str(code)+']，有效期10分钟。如非本人操作,请忽略.','passcetapp@163.com',[emailAddress] ,fail_silently=False)
         return HttpResponse('{"id":"'+str(id)+'"}')
-    except:
+    except Exception:
+        traceback.print_exc()
         return HttpResponse(SF.PASSCET_EMAIL_SEND_FAILED)
