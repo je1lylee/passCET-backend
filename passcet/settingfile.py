@@ -7,3 +7,5 @@ PASSCET_PARAMETER_ERROR = '{"code":202,"status":"缺少参数"}'
 PASSCET_EMAIL_SEND_FAILED = '{"code":204,"status":"E-MAIL发送失败"}'
 
 # 正确返回
+
+# 今天又是摸鱼的一天
