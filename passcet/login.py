@@ -8,6 +8,7 @@ def login(request):
     if token != SF.PASSCET_TOKEN and token != None:
         if type != None and (phone!=None or email != None):
             if type == 0: #用户是否存在
+
                 if phone == None:
                     # 处理邮件验证码
                     register.sendMail(email)
