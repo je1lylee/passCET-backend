@@ -8,12 +8,17 @@ def login(request):
     if token != SF.PASSCET_TOKEN and token != None:
         if type != None and (phone!=None or email != None):
             if type == 0: #用户是否存在
-
                 if phone == None:
                     # 处理邮件验证码
-                    register.sendMail(email)
+                    if len(models.passcet_user.objects.filter(email=email)) == 1:
+                        register.sendMail(email)
+                    else:
+                        return HttpResponse(SF.PASSCET_USER_DOES_NOT_EXIST)
                 else:
-                    register.sendSMS(phone)
+                    if len(models.passcet_user.objects.filter(phone=phone)) == 1:
+                        register.sendSMS(phone)
+                    else:
+                        return HttpResponse(SF.PASSCET_USER_DOES_NOT_EXIST)
             elif type == 1:
                 print()
             else:
