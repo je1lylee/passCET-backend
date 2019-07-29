@@ -1,0 +1,9 @@
+请求URL ： http://112.74.184.181:8000/login/
+请求方式POST
+参数说明
+token 令牌
+type执行的操作 type 0：验证存在并发送验证码 type1：验证验证码并返回结果，同时把用户的ID返回给客户端
+phone 手机号
+email 邮箱号
+id 邮箱验证码的id序列号 由type= 0时返回 code是email和phone验证时用户提供的验证码
+如果执行完成后，没有问题就会返回{"status": "ok"}，继续优化~

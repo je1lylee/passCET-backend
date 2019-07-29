@@ -23,9 +23,9 @@ def login(request):
                         return HttpResponse(SF.PASSCET_USER_DOES_NOT_EXIST)
             elif type == 1:
                 if phone != None and code != None:
-                    checkcode.checkPhone(phone,code)
+                    return checkcode.checkPhone(phone,code)
                 elif id != None and code != None:
-                    checkcode.chenkemail(id,code)
+                    return checkcode.chenkemail(id,code)
                 else:
                     return HttpResponse(SF.PASSCET_PARAMETER_ERROR) #缺少参数
             else:
