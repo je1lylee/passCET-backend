@@ -11,7 +11,7 @@ def login(request):
         if type != None and (phone!=None or email != None):
             if type == 0: #用户是否存在
                 if phone == None:
-                    # 处理邮件验证码
+                    # 处理邮件验证666码
                     if len(models.passcet_user.objects.filter(email=email)) == 1:
                         return register.sendMail(email)
                     else:
