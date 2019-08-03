@@ -15,22 +15,22 @@ def login(request):
                     if len(models.passcet_user.objects.filter(email=email)) == 1:
                         return register.sendMail(email)
                     else:
-                        return HttpResponse(SF.PASSCET_USER_DOES_NOT_EXIST)
+                        return HttpResponse(SF.PASSCET_205_USER_DOES_NOT_EXIST)
                 else:
                     if len(models.passcet_user.objects.filter(phone=phone)) == 1:
                         return register.sendSMS(phone)
                     else:
-                        return HttpResponse(SF.PASSCET_USER_DOES_NOT_EXIST)
+                        return HttpResponse(SF.PASSCET_205_USER_DOES_NOT_EXIST)
             elif type == 1:
                 if phone != None and code != None:
                     return checkcode.checkPhone(phone,code)
                 elif id != None and code != None:
                     return checkcode.chenkemail(id,code)
                 else:
-                    return HttpResponse(SF.PASSCET_PARAMETER_ERROR) #缺少参数
+                    return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR) #缺少参数
             else:
-                return HttpResponse(SF.PASSCET_PARAMETER_ERROR)
+                return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
         else:
-            return HttpResponse(SF.PASSCET_PARAMETER_ERROR)
+            return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
     else:
-        return HttpResponse(SF.PASSCET_TOKEN_ERROR)
+        return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
