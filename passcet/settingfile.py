@@ -10,3 +10,4 @@ PASSCET_206_DUPLICATE_USER = '{"code":206,"status":"重复的电话号码或邮�
 # 正确返回
 PASSCET_102_SEND_PHONE_MESSAGE_OK = '{"code":102,"status":"成功发送短信验证码"}'
 PASSCET_103_SEND_EMAIL_MESSAGE_OK = '{"code":103,"status":"成功发送邮箱验证码验证码","id":"'
+PASSCET_104_CHECK_EMAIL_MESSAGE_OK = '{"code":104,"status":"邮箱验证码验证成功"}'

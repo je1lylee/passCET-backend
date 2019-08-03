@@ -17,7 +17,7 @@ def checkcode(request):
         elif (id != None):
             return chenkemail(id, code)
     else:
-        return HttpResponse('{"status":"error"}')  # 错误的返回值
+        return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
 
 
 def checkPhone(phoneNumber, code):
@@ -35,7 +35,7 @@ def checkPhone(phoneNumber, code):
     if 'msg' in json_res:
         if (json_res['msg'] == 'ok'):
             # 返回成功的标志告诉前端执行其他操作
-            return HttpResponse('{"status" : "ok"}')
+            return HttpResponse(SF.PASSCET_104_CHECK_EMAIL_MESSAGE_OK)
     else:
         print(res.text)
         return HttpResponse('{"status" : "code-error"}')
