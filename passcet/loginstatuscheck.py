@@ -12,11 +12,11 @@ def loginstatuscheck(request):
             userInfo = models.passcet_user.objects.filter(id=id)
             return checkInfo(userInfo,cimei)
     elif token != SF.PASSCET_TOKEN:
-        return HttpResponse('{"code":"201","status":"Token错误"}')
+        return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
     elif id == None or cimei == None:
-        return HttpResponse('{"code":"202","status":"缺少参数"}')
+        return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
 def checkInfo(userInfo,cimei):
     if str(userInfo[0].lastimei) == cimei and time.time() - userInfo[0].logintime > 15*24*60:
-        return HttpResponse('{"code":"101","status":"OK"}')
+        return HttpResponse(SF.PASSCET_107_USERINFO_CHECK_SUCCESS)
     else:
-        return HttpResponse('{"code":"203","status":"需要重新登录"}')
+        return HttpResponse(SF.PASSCET_203_NEED_LOGIN)

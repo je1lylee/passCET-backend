@@ -15,4 +15,4 @@ def getusericon(request):
         else:
             return HttpResponse('{"status":"no-data"}')
     else:
-        return HttpResponse('{"status":"token-error"}')
+        return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
