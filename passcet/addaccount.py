@@ -29,22 +29,22 @@ def addaccount(request):
         else:
             return viaEmail(email, leavel, rtime,name,md5)
     else:
-        return HttpResponse('{"status":"error"}')
+        return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
 def viaPhone(phone, leavel, registerTime,name,md5):
     if len(passcet.models.passcet_user.objects.filter(phone__exact=phone)) == 0: #判断库里是不是已经有了相同的信息
         passcet.models.passcet_user.objects.create(phone=phone,leavel=leavel,registertime=registerTime,name=name,img_md5=md5)
-        return HttpResponse('{"status": "rigister_success"}')
+        return HttpResponse(SF.PASSCET_106_REGISTER_SUCCESS)
     else:
-        return HttpResponse('{"status":"already_exists"}')
+        return HttpResponse(SF.PASSCET_206_DUPLICATE_USER)
 
 def viaEmail(email, leavel, registerTime,name,md5):
     if len(passcet.models.passcet_user.objects.filter(email__exact=email)) == 0: #判断库里是不是已经有了相同的信息
         passcet.models.passcet_user.objects.create(email=email,leavel=leavel,registertime=registerTime,name=name,img_md5=md5)
-        return HttpResponse('{"status": "rigister_success"}')
+        return HttpResponse(SF.PASSCET_106_REGISTER_SUCCESS)
     else:
-        return HttpResponse('{"status":"already_exists"}')
+        return HttpResponse(SF.PASSCET_206_DUPLICATE_USER)
 
-def storagePic(request):
+def storagePic(request): # 存储头像 写文件的时候需要进行异常处理！
     img_file = request.FILES.get('image')
     md5ob = hashlib.md5()
     for chunk in img_file.chunks():#计算md5
