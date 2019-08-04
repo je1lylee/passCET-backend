@@ -35,10 +35,10 @@ def checkPhone(phoneNumber, code):
     if 'msg' in json_res:
         if (json_res['msg'] == 'ok'):
             # 返回成功的标志告诉前端执行其他操作
-            return HttpResponse(SF.PASSCET_104_CHECK_EMAIL_MESSAGE_OK)
+            return HttpResponse(SF.PASSCET_104_CHECK_PHONE_MESSAGE_OK)
     else:
         print(res.text)
-        return HttpResponse('{"status" : "code-error"}')
+        return HttpResponse(SF.PASSCET_207_PHONE_MESSAGE_ERROR)
 def chenkemail(id, code):
     #  需要验证id和code是否对应,time是否超时.可能要定期删个库啥的。。
     queryDB = passcet.models.passcet_emailcode.objects.filter(id=id) #通过过滤器查询指定的记录
@@ -47,9 +47,9 @@ def chenkemail(id, code):
         print('在数据库里查询到了结果')
         for i in queryDB:
             if str(i.code) == str(code) and time.time()-i.time <= 600:
-                return HttpResponse('{"status": "ok"}')
+                return HttpResponse(SF.PASSCET_105_CHECK_EMAIL_MESSAGE_OK)
             else:
                 print(time.time()-i.time)
-                return HttpResponse('{"status": "code-error"}')
+                return HttpResponse(SF.PASSCET_208_EMAIL_MESSAGE_ERROR)
     else:
-        return HttpResponse('{"status":"no-data"}')
+        return HttpResponse(SF.PASSCET_209_PHONE_MESSAGE_ID_ERROR)
