@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/bindaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/bindaccount.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/settingfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/settingfile.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +39,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/passcet/login.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
-                  <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+                <state relative-caret-position="220">
+                  <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -51,8 +51,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/passcet/bindaccount.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+                <state relative-caret-position="372">
+                  <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -63,7 +63,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/untitled/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="178">
+                <state relative-caret-position="350">
                   <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
                   <folding>
                     <element signature="e#632#664#0" expanded="true" />
@@ -75,8 +75,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/passcet/loginstatuscheck.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="350">
-                  <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+                <state relative-caret-position="-2">
+                  <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -109,7 +109,7 @@
             <entry file="file://$PROJECT_DIR$/passcet/register.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1452">
-                  <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+                  <caret line="66" selection-start-line="66" selection-end-line="66" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -120,7 +120,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/passcet/addaccount.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
+                <state relative-caret-position="924">
                   <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
@@ -157,8 +157,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/passcet/settingfile.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+                <state relative-caret-position="418">
+                  <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
@@ -210,11 +210,11 @@
         <option value="$PROJECT_DIR$/passcet/checkcode.py" />
         <option value="$PROJECT_DIR$/passcet/addaccount.py" />
         <option value="$PROJECT_DIR$/passcet/getusericon.py" />
-        <option value="$PROJECT_DIR$/passcet/settingfile.py" />
         <option value="$PROJECT_DIR$/passcet/loginstatuscheck.py" />
-        <option value="$PROJECT_DIR$/passcet/login.py" />
         <option value="$PROJECT_DIR$/bindaccount.py" />
         <option value="$PROJECT_DIR$/untitled/urls.py" />
+        <option value="$PROJECT_DIR$/passcet/login.py" />
+        <option value="$PROJECT_DIR$/passcet/settingfile.py" />
         <option value="$PROJECT_DIR$/passcet/bindaccount.py" />
       </list>
     </option>
@@ -387,12 +387,13 @@
       <workItem from="1564722582820" duration="1694000" />
       <workItem from="1564835705494" duration="7528000" />
       <workItem from="1564917429066" duration="7779000" />
-      <workItem from="1564982850765" duration="5960000" />
+      <workItem from="1564982850765" duration="6509000" />
+      <workItem from="1565011695765" duration="5446000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230224000" />
+    <option name="totallyTimeSpent" value="236219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="40" width="974" height="1047" extended-state="0" />
@@ -677,6 +678,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/passcet/addaccount.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/passcet/getusericon.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -694,20 +705,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/passcet/addaccount.py">
+    <entry file="file://$PROJECT_DIR$/passcet/register.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passcet/loginstatuscheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+        <state relative-caret-position="1452">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -724,20 +725,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/passcet/register.py">
+    <entry file="file://$PROJECT_DIR$/passcet/loginstatuscheck.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passcet/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+        <state relative-caret-position="-2">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -746,7 +737,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="350">
           <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
           <folding>
             <element signature="e#632#664#0" expanded="true" />
@@ -754,10 +745,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/passcet/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/passcet/bindaccount.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="372">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>

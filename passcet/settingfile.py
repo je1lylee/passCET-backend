@@ -4,7 +4,7 @@ PASSCET_TOKEN = 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW'
 
 # 错误返回
 PASSCET_201_TOKEN_ERROR = '{"code":201,"status":"Token错误"}'
-PASSCET_202_PARAMETER_ERROR = '{"code":202,"status":"缺少参数"}'
+PASSCET_202_PARAMETER_ERROR = '{"code":202,"status":"缺少参数或参数错误"}'
 PASSCET_203_NEED_LOGIN = '{"code":"203","status":"需要重新登录"}'
 PASSCET_204_EMAIL_SEND_FAILED = '{"code":204,"status":"E-MAIL发送失败"}'
 PASSCET_205_USER_DOES_NOT_EXIST = '{"code":205,"status":"用户不存在"}'
