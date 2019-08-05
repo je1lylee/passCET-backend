@@ -24,6 +24,7 @@ import passcet.addaccount
 import passcet.getusericon
 import passcet.loginstatuscheck
 from passcet import login
+from passcet import bindaccount
 from django.views.static import serve
 
 from untitled import function
@@ -39,4 +40,5 @@ urlpatterns = [
     path('getusericon/',passcet.getusericon.getusericon),
     path('loginstatuscheck/',passcet.loginstatuscheck.loginstatuscheck),
     path('login/',login.login),
+    path('bindaccount/',bindaccount.bindaccount),
 ]
