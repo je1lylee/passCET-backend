@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from passcet import settingfile as SF
 from passcet import models
+from passcet import register
 # 检查账号是否存在，如果存在检查将要绑定的手机或邮箱是不是已经被绑定过了
 def bindaccount(request):
     token = request.POST.get('token')
@@ -15,9 +16,14 @@ def bindaccount(request):
     #验证TOKEN
     if token != None and token == SF.PASSCET_TOKEN:
         if type != None and (phone != None or email != None) and type != None and option != None:
-            if type == 0:
-                if len(models.passcet_user.objects.filter(email = email)) == 1:
-                    print()
+            if type == 0: # 0:已经绑定邮箱，需要绑定手机号
+                if len(models.passcet_user.objects.filter(email = email)) == 1: #查库，有这个账号
+                    if option == 0: # send code
+                        register.sendSMS(phone)
+                    elif option == 1: #check code
+                        print()
+                    else:
+                        return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
                 else:
                     return HttpResponse(SF.PASSCET_205_USER_DOES_NOT_EXIST)
             elif type == 1:
