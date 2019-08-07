@@ -50,8 +50,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/passcet/bindaccount.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+                <state relative-caret-position="438">
+                  <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -156,8 +156,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/passcet/settingfile.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="28" lean-forward="true" selection-start-column="2" selection-end-column="28" />
+                <state relative-caret-position="110">
+                  <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -219,8 +219,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="y" value="40" />
+    <option name="x" value="882" />
+    <option name="y" value="102" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -388,12 +388,13 @@
       <workItem from="1564917429066" duration="7779000" />
       <workItem from="1564982850765" duration="6509000" />
       <workItem from="1565011695765" duration="5482000" />
-      <workItem from="1565090545609" duration="3110000" />
+      <workItem from="1565090545609" duration="4350000" />
+      <workItem from="1565179055303" duration="2496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239365000" />
+    <option name="totallyTimeSpent" value="243101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="40" width="974" height="1047" extended-state="0" />
@@ -757,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/passcet/bindaccount.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+        <state relative-caret-position="438">
+          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
