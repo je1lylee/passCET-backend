@@ -20,3 +20,16 @@ class passcet_emailcode(models.Model):
     time = models.FloatField(default=0)
     def __str__(self):
         return str(self.id)
+
+class passcet_word(models.Model):
+    word = models.CharField(max_length=128, null=False)
+    ph_en = models.CharField(max_length=128 ,default=0)
+    ph_am = models.CharField(max_length=128,default=0)
+    ph_en_mp3 = models.CharField(max_length=128,default=0)
+    ph_am_mp3 = models.CharField(max_length=128,default=0)
+    description = models.TextField(default=0)
+    sentence = models.TextField(default=0)
+    cet4 = models.TextField(default=0)
+    cet6 = models.TextField(default=0)
+    def __str__(self):
+        return str(self.word)
