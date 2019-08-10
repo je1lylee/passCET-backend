@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+import json
 from passcet import settingfile as SF
 from passcet import models
 from passcet import register
@@ -22,7 +23,12 @@ def bindaccount(request):
                     if option == 0: # send code
                         return register.sendSMS(phone)
                     elif option == 1: #check code
-                        return checkcode.checkPhone(phone,code)
+                        codestatus_json = checkcode.checkPhone(phone,code) #检查短信的验证码是否正确
+                        codestatus = json.loads(codestatus_json.text)
+                        if 'code' in codestatus:
+                            if(codestatus['code'] == '104'):
+                                models.passcet_user.objects.filter(email = email).update(phone=phone);
+                                return HttpResponse(SF.PASSCET_108_BIND_PHONE_SUCCESS)
                     else:
                         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
                 else:
@@ -32,7 +38,13 @@ def bindaccount(request):
                     if option ==0:
                         return register.sendMail(email)
                     elif option == 1:
-                        return checkcode.chenkemail(id,code)
+                        codestatus_json = checkcode.chenkemail(id,code)
+                        codestatus = json.loads(codestatus_json.text)
+                        if code in codestatus:
+                            if(codestatus['code'] == '105')
+                                models.passcet_user.objects.filter(phone=phone).update(email = email)
+                                return HttpResponse(SF.PASSCET_109_BIND_EMAIL_SUCCESS)
+
                     else:
                         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
             else:

@@ -20,3 +20,5 @@ PASSCET_104_CHECK_PHONE_MESSAGE_OK = '{"code":104,"status":"短信验证码验�
 PASSCET_105_CHECK_EMAIL_MESSAGE_OK = '{"code":105,"status":"邮箱验证码验证成功"}'
 PASSCET_106_REGISTER_SUCCESS = '{"code":106,"status":"成功注册"}'
 PASSCET_107_USERINFO_CHECK_SUCCESS = '{"code":107,"status":"验证成功"}'
+PASSCET_108_BIND_PHONE_SUCCESS = '{"code":108,"status":"手机号绑定成功"}'
+PASSCET_109_BIND_EMAIL_SUCCESS = '{"code":109,"status":"邮箱绑定成功"}'
