@@ -23,6 +23,7 @@ import passcet.checkcode
 import passcet.addaccount
 import passcet.getusericon
 import passcet.loginstatuscheck
+from passcet import getword
 from passcet import login
 from passcet import bindaccount
 from django.views.static import serve
@@ -41,4 +42,5 @@ urlpatterns = [
     path('loginstatuscheck/',passcet.loginstatuscheck.loginstatuscheck),
     path('login/',login.login),
     path('bindaccount/',bindaccount.bindaccount),
+    path('getword/',getword.getword),
 ]

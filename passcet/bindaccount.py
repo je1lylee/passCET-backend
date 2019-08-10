@@ -41,7 +41,7 @@ def bindaccount(request):
                         codestatus_json = checkcode.chenkemail(id,code)
                         codestatus = json.loads(codestatus_json.text)
                         if code in codestatus:
-                            if(codestatus['code'] == '105')
+                            if codestatus['code'] == '105':
                                 models.passcet_user.objects.filter(phone=phone).update(email = email)
                                 return HttpResponse(SF.PASSCET_109_BIND_EMAIL_SUCCESS)
 
