@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from passcet import settingfile as SF
 
 
 
@@ -11,4 +12,4 @@ from django.http import HttpResponse
 # 2019年8月14日 考科三鸽三天
 
 def getword(request):
-    return HttpResponse()
+    return HttpResponse('OK')
