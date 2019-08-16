@@ -9,7 +9,7 @@ from passcet import settingfile as SF
 # 需要忽略前41个字符和最后的一个字符
 # http://www.iciba.com/index.php?a=getWordMean&c=search&list=1%2C2%2C3%2C4%2C5%2C8%2C9%2C10%2C12%2C13%2C14%2C15%2C18%2C21%2C22%2C24%2C3003%2C3004%2C3005&word=ambition&_=1565436821302
 # 直接请求上面儿的网址即可返回一个标准的json
-# 2019年8月14日 考科三鸽三天
+# 我发誓明天就开始继续写代码 不咕咕咕
 
 def getword(request):
     return HttpResponse('OK')
