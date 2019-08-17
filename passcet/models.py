@@ -22,8 +22,8 @@ class passcet_emailcode(models.Model):
         return str(self.id)
 
 class passcet_word(models.Model):
-    word = models.CharField(max_length=128, null=False) #单词名字
-    ph_en = models.CharField(max_length=128 ,default=0) #英式音标
+    word = models.CharField(max_length=128, null=False) # 单词名字
+    ph_en = models.CharField(max_length=128 ,default=0) # 英式音标
     ph_am = models.CharField(max_length=128,default=0) # 美式音标
     ph_en_mp3 = models.CharField(max_length=128,default=0) # 英式发音
     ph_am_mp3 = models.CharField(max_length=128,default=0) # 美式发音
