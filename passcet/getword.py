@@ -16,9 +16,9 @@ def getword(request):
     print(json_res['baesInfo']['symbols'][0]['ph_am'])
     print(json_res['baesInfo']['symbols'][0]['ph_en_mp3'])
     print(json_res['baesInfo']['symbols'][0]['ph_am_mp3'])
-    print(json_res['baesInfo']['symbols'][0]['parts'][0]) # 遍历List
+    # print(json_res['baesInfo']['symbols'][0]['parts'][0]) # 遍历List
     for i in json_res['baesInfo']['symbols'][0]['parts']:
-        testString = testString+i
+        testString = testString+json.dumps(i)+','
         # print(i)  释义
     print(testString)
     print(json_res['sentence']) #例句
