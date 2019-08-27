@@ -28,6 +28,7 @@ def getword(request):
         # print(i)  释义
     print(testString)
     print(json.dumps(json_res['sentence']))  # 例句
+    # 开始存储数据
     if models.passcet_word.objects.filter(word='"'+str(QueryWord)+'"').count() :
         models.passcet_word.objects.filter(word='"'+str(QueryWord)+'"').delete()
     if 'cetFour' and 'cetSix' in json_res:
@@ -61,4 +62,5 @@ def getword(request):
                                            sentence=json.dumps(json_res['sentence']),
                                            cet4=json.dumps(json_res['cetSix']['count']))
     # 数据存储结束
+    # 开始检索数据库
     return HttpResponse(SF.PASSCET_101_OK)
