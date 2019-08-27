@@ -19,27 +19,29 @@ def getword(request):
     print(json_res['baesInfo']['symbols'][0]['ph_en_mp3'])
     print(json_res['baesInfo']['symbols'][0]['ph_am_mp3'])
     # print(json_res['baesInfo']['symbols'][0]['parts'][0]) # 遍历List
+    demoString = json.dumps(json_res['baesInfo']['symbols'][0])
+    print('测试字符串'+demoString)
     for i in json_res['baesInfo']['symbols'][0]['parts']:
         testString = testString + json.dumps(i) + ','
         # print(i)  释义
     print(testString)
-    print(json_res['sentence'])  # 例句
+    print(json.dumps(json_res['sentence']))  # 例句
     if 'cetFour' in json_res:
         print(json_res['cetFour']['count'])
-        models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
-                                           ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
-                                           ph_am=json_res['baesInfo']['symbols'][0]['ph_am'],
-                                           ph_en_mp3=json_res['baesInfo']['symbols'][0]['ph_en_mp3'],
-                                           ph_am_mp3=json_res['baesInfo']['symbols'][0]['ph_am_mp3'],
-                                           description=testString, sentence=json_res['sentence'],
-                                           cet4=json_res['cetFour']['count'])
+        models.passcet_word.objects.create(word=json.dumps(json_res['baesInfo']['word_name']),
+                                           ph_en=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en']),
+                                           ph_am=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am']),
+                                           ph_en_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en_mp3']),
+                                           ph_am_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am_mp3']),
+                                           description=json.dumps(json_res['baesInfo']['symbols'][0]['parts']), sentence=json.dumps(json_res['sentence']),
+                                           cet4=json.dumps(json_res['cetFour']['count']))
     if 'cetSix' in json_res:
         print(json_res['cetSix']['count'])
-        models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
-                                           ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
-                                           ph_am=json_res['baesInfo']['symbols'][0]['ph_am'],
-                                           ph_en_mp3=json_res['baesInfo']['symbols'][0]['ph_en_mp3'],
-                                           ph_am_mp3=json_res['baesInfo']['symbols'][0]['ph_am_mp3'],
-                                           description=testString, sentence=json_res['sentence'],
-                                           cet4=json_res['cetSix']['count'])
+        models.passcet_word.objects.create(word=json.dumps(json_res['baesInfo']['word_name']),
+                                           ph_en=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en']),
+                                           ph_am=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am']),
+                                           ph_en_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en_mp3']),
+                                           ph_am_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am_mp3']),
+                                           description=json.dumps(json_res['baesInfo']['symbols'][0]['parts']), sentence=json.dumps(json_res['sentence']),
+                                           cet4=json.dumps(json_res['cetSix']['count']))
     return HttpResponse(SF.PASSCET_101_OK)
