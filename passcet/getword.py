@@ -35,51 +35,51 @@ def getword(request):
         traceback.print_exc()
         return HttpResponse(SF.PASSCET_211_WORD_ERROR)
     # 开始存储数据
-    if models.passcet_word.objects.filter(word='"'+str(QueryWord)+'"').count() :
-        models.passcet_word.objects.filter(word='"'+str(QueryWord)+'"').delete()
+    if models.passcet_word.objects.filter(word=str(QueryWord)).count() :
+        models.passcet_word.objects.filter(word=str(QueryWord)).delete()
     if 'cetFour' and 'cetSix' in json_res:
         print('46都存在')
-        models.passcet_word.objects.create(word=json.dumps(json_res['baesInfo']['word_name']),
-                                           ph_en=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en']),
-                                           ph_am=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am']),
-                                           ph_en_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en_mp3']),
-                                           ph_am_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am_mp3']),
+        models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
+                                           ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
+                                           ph_am=json_res['baesInfo']['symbols'][0]['ph_am'],
+                                           ph_en_mp3=json_res['baesInfo']['symbols'][0]['ph_en_mp3'],
+                                           ph_am_mp3=json_res['baesInfo']['symbols'][0]['ph_am_mp3'],
                                            description=json.dumps(json_res['baesInfo']['symbols'][0]['parts']),
                                            sentence=json.dumps(json_res['sentence']),
                                            cet4=json.dumps(json_res['cetFour']['count']),
                                            cet6=json.dumps(json_res['cetSix']['count']))
     elif 'cetFour' in json_res:
         print(json_res['cetFour']['count'])
-        models.passcet_word.objects.create(word=json.dumps(json_res['baesInfo']['word_name']),
-                                           ph_en=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en']),
-                                           ph_am=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am']),
-                                           ph_en_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en_mp3']),
-                                           ph_am_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am_mp3']),
+        models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
+                                           ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
+                                           ph_am=json_res['baesInfo']['symbols'][0]['ph_am'],
+                                           ph_en_mp3=json_res['baesInfo']['symbols'][0]['ph_en_mp3'],
+                                           ph_am_mp3=json_res['baesInfo']['symbols'][0]['ph_am_mp3'],
                                            description=json.dumps(json_res['baesInfo']['symbols'][0]['parts']),
                                            sentence=json.dumps(json_res['sentence']),
                                            cet4=json.dumps(json_res['cetFour']['count']))
     elif 'cetSix' in json_res:
         print(json_res['cetSix']['count'])
-        models.passcet_word.objects.create(word=json.dumps(json_res['baesInfo']['word_name']),
-                                           ph_en=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en']),
-                                           ph_am=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am']),
-                                           ph_en_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en_mp3']),
-                                           ph_am_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am_mp3']),
+        models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
+                                           ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
+                                           ph_am=json_res['baesInfo']['symbols'][0]['ph_am'],
+                                           ph_en_mp3=json_res['baesInfo']['symbols'][0]['ph_en_mp3'],
+                                           ph_am_mp3=json_res['baesInfo']['symbols'][0]['ph_am_mp3'],
                                            description=json.dumps(json_res['baesInfo']['symbols'][0]['parts']),
                                            sentence=json.dumps(json_res['sentence']),
                                            cet4=json.dumps(json_res['cetSix']['count']))
     else:
         print('46都不存在')
-        models.passcet_word.objects.create(word=json.dumps(json_res['baesInfo']['word_name']),
-                                           ph_en=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en']),
-                                           ph_am=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am']),
-                                           ph_en_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_en_mp3']),
-                                           ph_am_mp3=json.dumps(json_res['baesInfo']['symbols'][0]['ph_am_mp3']),
+        models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
+                                           ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
+                                           ph_am=json_res['baesInfo']['symbols'][0]['ph_am'],
+                                           ph_en_mp3=json_res['baesInfo']['symbols'][0]['ph_en_mp3'],
+                                           ph_am_mp3=json_res['baesInfo']['symbols'][0]['ph_am_mp3'],
                                            description=json.dumps(json_res['baesInfo']['symbols'][0]['parts']),
                                            sentence=json.dumps(json_res['sentence']))
     # 数据存储结束
     # 开始检索数据库
-    QuerySett = models.passcet_word.objects.filter(word='"'+str(QueryWord)+'"')
+    QuerySett = models.passcet_word.objects.filter(word=str(QueryWord))
     print(QuerySett)
     return HttpResponse(json.dumps(list(QuerySett.values())))
     return HttpResponse(SF.PASSCET_101_OK)
