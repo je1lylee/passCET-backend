@@ -14,6 +14,7 @@ PASSCET_208_EMAIL_MESSAGE_ERROR = '{"code":208,"status":"邮箱验证码错误"}
 PASSCET_209_PHONE_MESSAGE_ID_ERROR = '{"code":209,"status":"邮箱验证码ID不存在"}'
 PASSCET_210_NO_IMG_DATA = '{"code":210,"status":"图片数据不存在"}'
 PASSCET_211_WORD_ERROR = '{"code":211,"status":"查询的单词错误或单词不存在"}'
+PASSCET_212_SEARCH_ERROR = '{"code":212,"status":"无法在线查询词汇，且数据库内没有缓存数据"}'
 # 正确返回
 PASSCET_101_OK = '{"code":101,"status":"成功"}' #仅用作测试
 PASSCET_102_SEND_PHONE_MESSAGE_OK = '{"code":102,"status":"成功发送短信验证码"}'
