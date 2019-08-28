@@ -33,6 +33,7 @@ from untitled import function
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', function.home), #这是启动页面 也就是 http://localhost:port的页面
+
     path('polls/', include('polls.urls')),
     # path('login/', login.home),
     path('heartbeat/' ,passcet.isrunning.home),
