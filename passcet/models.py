@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-# 用户表
+# 用户
 class passcet_user(models.Model):
     name = models.CharField(max_length=30) #昵称 可以为空？
     email = models.CharField(max_length=60, null=True) #email 电话和邮件有一个即可
@@ -20,7 +20,7 @@ class passcet_emailcode(models.Model):
     time = models.FloatField(default=0)
     def __str__(self):
         return str(self.id)
-
+#单词
 class passcet_word(models.Model):
     word = models.CharField(max_length=128, null=False) # 单词名字
     ph_en = models.CharField(max_length=128 ,default=0) # 英式音标
@@ -33,3 +33,10 @@ class passcet_word(models.Model):
     cet6 = models.TextField(default=0)# 六级词频
     def __str__(self):
         return str(self.word)
+# 用户生词本
+class passcet_glossary(models.Model):
+    user_id = models.IntegerField(null=False,max_length=64) # 用户id
+    word = models.CharField(max_length=128,null=False)# 单词内容
+    description = models.TextField(max_length=128,null=False) # 单词的简单释义
+    def __str__(self):
+        return str(self.user_id)+'\'s'+str(self.word)
