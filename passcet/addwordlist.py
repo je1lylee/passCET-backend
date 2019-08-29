@@ -1,6 +1,9 @@
+import json
+
 from django.http import HttpResponse
 from passcet import settingfile as SF
 from passcet import models
+from passcet import getword
 # 添加单词到生词本
 def addwordlist(request):
     token = request.POST.get('token')
@@ -12,9 +15,14 @@ def addwordlist(request):
     elif userid == None or word == None:
         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
     else:
-        if models.passcet_glossary.objects.filter(user_id=userid).count():
-            print('xx')
+        if models.passcet_user.objects.filter(id=userid).count():
+            if models.passcet_glossary.objects.filter(user_id=userid,word=word).count():
+                print('已存在！')
+            else:
+                # models.passcet_glossary.objects.create(user_id=userid,word=word,description=)
+                finalQuery = str(getword.mainMethod(word))
+                print(finalQuery)
         else:
             return HttpResponse(SF.PASSCET_205_USER_DOES_NOT_EXIST)
 
-    return HttpResponse(SF.PASSCET_101_OKw)
+    return HttpResponse(SF.PASSCET_101_OK)
