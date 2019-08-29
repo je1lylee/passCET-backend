@@ -35,7 +35,7 @@ class passcet_word(models.Model):
         return str(self.word)
 # 用户生词本
 class passcet_glossary(models.Model):
-    user_id = models.IntegerField(null=False,max_length=64) # 用户id
+    user_id = models.IntegerField(null=False) # 用户id
     word = models.CharField(max_length=128,null=False)# 单词内容
     description = models.TextField(max_length=128,null=False) # 单词的简单释义
     def __str__(self):
