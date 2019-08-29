@@ -17,6 +17,7 @@ PASSCET_211_WORD_ERROR = '{"code":211,"status":"查询的单词错误或单词�
 PASSCET_212_SEARCH_ERROR = '{"code":212,"status":"无法在线查询词汇，且数据库内没有缓存数据"}'
 PASSCET_213_DB_ERROR = '{"code":213,"status":"数据库异常"}'
 PASSCET_214_WORD_EUPLICATE = '{"code":214,"status":"用户生词本中已存在该单词"}'
+PASSCET_215_GLOSSARY_NO_DATA = '{"code":215,"status":"用户生词本中不存在该单词"}'
 # 正确返回
 PASSCET_101_OK = '{"code":101,"status":"成功"}' #仅用作测试
 PASSCET_102_SEND_PHONE_MESSAGE_OK = '{"code":102,"status":"成功发送短信验证码"}'
@@ -28,3 +29,4 @@ PASSCET_107_USERINFO_CHECK_SUCCESS = '{"code":107,"status":"验证成功"}'
 PASSCET_108_BIND_PHONE_SUCCESS = '{"code":108,"status":"手机号绑定成功"}'
 PASSCET_109_BIND_EMAIL_SUCCESS = '{"code":109,"status":"邮箱绑定成功"}'
 PASSCET_110_ADD_GLOSSARY_SUCCESS = '{"code":110,"status":"单词已添加到生词本"}'
+PASSCET_111_DEL_GLOSSARY_SUCCESS = '{"code":110,"status":"单词已从生词本中移除"}'

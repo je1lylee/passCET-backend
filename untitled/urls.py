@@ -28,6 +28,7 @@ from passcet import login
 from passcet import bindaccount
 from passcet import unbindaccount
 from passcet import addwordlist
+from passcet import delwordlist
 from django.views.static import serve
 
 from untitled import function
@@ -48,4 +49,5 @@ urlpatterns = [
     path('getword/',getword.getword),
     path('unbindaccount/',unbindaccount.unbindaccount),
     path('addwordlist/',addwordlist.addwordlist),
+    path('delwordlist/',delwordlist.delwordlist),
 ]
