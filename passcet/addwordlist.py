@@ -17,11 +17,14 @@ def addwordlist(request):
     else:
         if models.passcet_user.objects.filter(id=userid).count():
             if models.passcet_glossary.objects.filter(user_id=userid,word=word).count():
-                print('已存在！')
+                return HttpResponse(SF.PASSCET_214_WORD_EUPLICATE)
             else:
-                # models.passcet_glossary.objects.create(user_id=userid,word=word,description=)
-                finalQuery = str(getword.mainMethod(word))
-                print(finalQuery)
+                try:
+                    models.passcet_glossary.objects.create(user_id=userid,word=word,description=json.loads(str(getword.mainMethod(word)))[0]['description'])
+                    return HttpResponse(SF.PASSCET_110_ADD_GLOSSARY_SUCCESS)
+                except:
+                    return HttpResponse(SF.PASSCET_213_DB_ERROR)
+
         else:
             return HttpResponse(SF.PASSCET_205_USER_DOES_NOT_EXIST)
 

@@ -4,7 +4,7 @@
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/addwordlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/addwordlist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getword.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/settingfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/settingfile.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/passcet/getword.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state relative-caret-position="303">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="27" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/passcet/addwordlist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+            <state relative-caret-position="487">
+              <caret line="25" column="60" lean-forward="true" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -61,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/passcet/settingfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="49" />
+            <state relative-caret-position="396">
+              <caret line="18" column="64" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -135,19 +135,19 @@
         <option value="$PROJECT_DIR$/bindaccount.py" />
         <option value="$PROJECT_DIR$/passcet/login.py" />
         <option value="$PROJECT_DIR$/passcet/bindaccount.py" />
-        <option value="$PROJECT_DIR$/passcet/settingfile.py" />
         <option value="$PROJECT_DIR$/passcet/unbindaccount.py" />
         <option value="$PROJECT_DIR$/untitled/urls.py" />
         <option value="$PROJECT_DIR$/passcet/admin.py" />
         <option value="$PROJECT_DIR$/passcet/models.py" />
-        <option value="$PROJECT_DIR$/passcet/addwordlist.py" />
         <option value="$PROJECT_DIR$/passcet/getword.py" />
+        <option value="$PROJECT_DIR$/passcet/settingfile.py" />
+        <option value="$PROJECT_DIR$/passcet/addwordlist.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="546" />
-    <option name="y" value="277" />
+    <option name="x" value="507" />
+    <option name="y" value="48" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -329,12 +329,12 @@
       <workItem from="1566866104755" duration="18300000" />
       <workItem from="1566952021766" duration="17817000" />
       <workItem from="1566998406961" duration="2959000" />
-      <workItem from="1567039324146" duration="9006000" />
+      <workItem from="1567039324146" duration="12962000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321090000" />
+    <option name="totallyTimeSpent" value="325046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -703,29 +703,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/passcet/getword.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/passcet/settingfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="49" />
+        <state relative-caret-position="396">
+          <caret line="18" column="64" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/passcet/addwordlist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        <state relative-caret-position="487">
+          <caret line="25" column="60" lean-forward="true" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passcet/getword.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
