@@ -7,6 +7,7 @@ import hashlib
 import filetype
 from django.conf import settings
 from passcet import settingfile as SF
+from passcet import takelog
 # Author:NsuMicClub-Liguodong
 
 # 只有在验证码验证成功的时候才可以调用，这个方法就直接往数据库里写信息了
@@ -29,19 +30,24 @@ def addaccount(request):
         else:
             return viaEmail(email, leavel, rtime,name,md5)
     else:
+        take_log(SF.PASSCET_202_PARAMETER_ERROR)
         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
 def viaPhone(phone, leavel, registerTime,name,md5):
     if len(passcet.models.passcet_user.objects.filter(phone__exact=phone)) == 0: #判断库里是不是已经有了相同的信息
         passcet.models.passcet_user.objects.create(phone=phone,leavel=leavel,registertime=registerTime,name=name,img_md5=md5)
+        take_log(SF.PASSCET_106_REGISTER_SUCCESS)
         return HttpResponse(SF.PASSCET_106_REGISTER_SUCCESS)
     else:
+        take_log(SF.PASSCET_206_DUPLICATE_USER)
         return HttpResponse(SF.PASSCET_206_DUPLICATE_USER)
 
 def viaEmail(email, leavel, registerTime,name,md5):
     if len(passcet.models.passcet_user.objects.filter(email__exact=email)) == 0: #判断库里是不是已经有了相同的信息
         passcet.models.passcet_user.objects.create(email=email,leavel=leavel,registertime=registerTime,name=name,img_md5=md5)
+        take_log(SF.PASSCET_106_REGISTER_SUCCESS)
         return HttpResponse(SF.PASSCET_106_REGISTER_SUCCESS)
     else:
+        take_log(SF.PASSCET_206_DUPLICATE_USER)
         return HttpResponse(SF.PASSCET_206_DUPLICATE_USER)
 
 def storagePic(request): # 存储头像 写文件的时候需要进行异常处理！
@@ -60,3 +66,5 @@ def storagePic(request): # 存储头像 写文件的时候需要进行异常处�
     else:
         print('数据库里有，直接写库')
     return md5
+def take_log(status):
+    takelog.takelog('addaccount',status)

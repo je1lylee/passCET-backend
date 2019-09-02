@@ -40,3 +40,9 @@ class passcet_glossary(models.Model):
     description = models.TextField(max_length=128,null=False) # 单词的简单释义
     def __str__(self):
         return str(self.user_id)+'\'s'+str(self.word)
+class passcet_log(models.Model):
+    api_part = models.TextField(max_length=128,null=False) #调用API的名字
+    status = models.TextField(max_length=128,null=False)
+    time = models.TextField(max_length=128,null=False)
+    def __str__(self):
+        return str(self.api_part)+'##'+str(self.status)

@@ -4,7 +4,7 @@ import requests
 import json
 from passcet import settingfile as SF
 from passcet import models
-
+from passcet import takelog
 
 # http://www.iciba.com/index.php?a=getWordMean&c=search&list=1%2C2%2C3%2C4%2C5%2C8%2C9%2C10%2C12%2C13%2C14%2C15%2C18%2C21%2C22%2C24%2C3003%2C3004%2C3005&word=ambition&_=1565436821302
 # 直接请求上面儿的网址即可返回一个标准的json
@@ -13,8 +13,10 @@ def getword(request):
     token = request.POST.get('token')
     QueryWord = request.POST.get('word')
     if token!= SF.PASSCET_TOKEN or token == None:
+        take_log(SF.PASSCET_201_TOKEN_ERROR)
         return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
     elif QueryWord == None:
+        take_log(SF.PASSCET_202_PARAMETER_ERROR)
         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
     else:
         return HttpResponse(mainMethod(QueryWord))
@@ -40,6 +42,7 @@ def mainMethod(QueryWord):
             print(json.dumps(json_res['sentence']))  # 例句
         except:
             traceback.print_exc()
+            take_log(SF.PASSCET_211_WORD_ERROR)
             return SF.PASSCET_211_WORD_ERROR
         # 开始存储数据
         if models.passcet_word.objects.filter(word=str(QueryWord)).count():
@@ -88,6 +91,7 @@ def mainMethod(QueryWord):
         # 开始检索数据库
         QuerySett = models.passcet_word.objects.filter(word=str(QueryWord))
         print(QuerySett)
+        take_log(SF.PASSCET_101_OK)
         return json.dumps(list(QuerySett.values()))
     except:
         # 读取数据库中的缓存信息
@@ -95,6 +99,10 @@ def mainMethod(QueryWord):
         try:
             QuerySett = models.passcet_word.objects.filter(word=str(QueryWord))
             print(QuerySett)
+            take_log(SF.PASSCET_101_OK)
             return json.dumps(list(QuerySett.values()))
         except:
+            take_log(SF.PASSCET_212_SEARCH_ERROR)
             return SF.PASSCET_212_SEARCH_ERROR
+def take_log(status):
+    takelog.takelog('getword',status)

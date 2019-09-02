@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from passcet import models
 from passcet import settingfile as SF
+from passcet import takelog
 def getusericon(request):
     # Author: NsuMicClub:Liguodong
     """
@@ -11,8 +12,14 @@ def getusericon(request):
         imageid = models.passcet_user.objects.filter(id=id)
         if len(imageid) != 0:
             imagedata = open('static/img/'+imageid[0].img_md5+'.jpeg','rb').read()
+            take_log(SF.PASSCET_101_OK)
             return HttpResponse(imagedata,content_type='image/jpeg')
         else:
-            return HttpResponse('{"status":"no-data"}')
+            take_log(SF.PASSCET_210_NO_IMG_DATA)
+            return HttpResponse(SF.PASSCET_210_NO_IMG_DATA)
     else:
+        take_log(SF.PASSCET_201_TOKEN_ERROR)
         return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
+
+def take_log(status):
+    takelog.takelog('getusericon',status)

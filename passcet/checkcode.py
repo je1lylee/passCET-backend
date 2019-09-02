@@ -5,6 +5,7 @@ import requests
 import time
 import passcet.models
 from passcet import settingfile as SF
+from passcet import takelog
 #author: NsuMicClub-Liguodong
 def checkcode(request):
     token = request.GET.get('token')
@@ -17,6 +18,7 @@ def checkcode(request):
         elif (id != None):
             return chenkemail(id, code)
     else:
+        take_log(SF.PASSCET_202_PARAMETER_ERROR)
         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
 
 
@@ -35,9 +37,11 @@ def checkPhone(phoneNumber, code):
     if 'msg' in json_res:
         if (json_res['msg'] == 'ok'):
             # 返回成功的标志告诉前端执行其他操作
+            take_log(SF.PASSCET_104_CHECK_PHONE_MESSAGE_OK)
             return HttpResponse(SF.PASSCET_104_CHECK_PHONE_MESSAGE_OK)
     else:
         print(res.text)
+        take_log(SF.PASSCET_207_PHONE_MESSAGE_ERROR)
         return HttpResponse(SF.PASSCET_207_PHONE_MESSAGE_ERROR)
 def chenkemail(id, code):
     #  需要验证id和code是否对应,time是否超时.可能要定期删个库啥的。。
@@ -47,9 +51,14 @@ def chenkemail(id, code):
         print('在数据库里查询到了结果')
         for i in queryDB:
             if str(i.code) == str(code) and time.time()-i.time <= 600:
+                take_log(SF.PASSCET_105_CHECK_EMAIL_MESSAGE_OK)
                 return HttpResponse(SF.PASSCET_105_CHECK_EMAIL_MESSAGE_OK)
             else:
                 print(time.time()-i.time)
+                take_log(SF.PASSCET_108_BIND_PHONE_SUCCESS)
                 return HttpResponse(SF.PASSCET_208_EMAIL_MESSAGE_ERROR)
     else:
+        take_log(SF.PASSCET_209_PHONE_MESSAGE_ID_ERROR)
         return HttpResponse(SF.PASSCET_209_PHONE_MESSAGE_ID_ERROR)
+def take_log(status):
+    takelog('checkcode',status)

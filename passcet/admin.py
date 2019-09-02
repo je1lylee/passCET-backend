@@ -13,7 +13,11 @@ class wordAdmin(admin.ModelAdmin):
 class glossaryAdmin(admin.ModelAdmin):
     list_display = ('id','user_id','word','description')
     search_fields = ['word']
+class logAdmin(admin.ModelAdmin):
+    list_display = ('id','api_part','status','time')
+    search_fields = ['api_part']
 admin.site.register(passcet_user,userAdmin)
 admin.site.register(passcet_emailcode,emailcodeAdmin)
 admin.site.register(passcet_word,wordAdmin)
 admin.site.register(passcet_glossary,glossaryAdmin)
+admin.site.register(passcet_log,logAdmin)
