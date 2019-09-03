@@ -65,7 +65,7 @@ def sendMail(emailAddress):
     try:
         passcet.models.passcet_emailcode.objects.create(id=id,code=code,time=curlTime)
         send_mail('PassCET-验证邮件','您的验证码是['+str(code)+']，有效期10分钟。如非本人操作,请忽略.','passcetapp@163.com',[emailAddress] ,fail_silently=False)
-        take_log(SF.PASSCET_103_SEND_EMAIL_MESSAGE_OK)
+        take_log(SF.PASSCET_103_SEND_EMAIL_MESSAGE_OK+str(id)+'"}')
         return HttpResponse(SF.PASSCET_103_SEND_EMAIL_MESSAGE_OK+str(id)+'"}')
     except:
         traceback.print_exc() #console输出错误信息
