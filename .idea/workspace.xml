@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/register.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -212,7 +213,7 @@
       <workItem from="1567429787533" duration="1588000" />
       <workItem from="1567432417769" duration="80000" />
       <workItem from="1567432542094" duration="213000" />
-      <workItem from="1567472020427" duration="1230000" />
+      <workItem from="1567472020427" duration="4660000" />
     </task>
     <servers />
   </component>
