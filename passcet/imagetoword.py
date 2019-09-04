@@ -18,10 +18,7 @@ def imagetoword(request):
     sendData = urllib.parse.urlencode(sendData).encode('utf-8')
     res = requests.post('https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic/?access_token=24.871b8e9b927215274362407024f7a450.2592000.1570160796.282335-17173201', data=sendData, headers=headers)
     print(res.text)
-    wordlist = process_json(res)
-    wordlist = json.dumps(wordlist)
-    print(type(wordlist))
-    return HttpResponse(wordlist)
+    return HttpResponse(process_json(res))
 
 def process_json(json_string):
     # 去掉特殊符号 大写字母 空格 //考虑正则完成
@@ -34,4 +31,4 @@ def process_json(json_string):
         word = ''.join(word.split())
         print(word)
         wordlist.append(word)
-    return wordlist
+    return json.dumps(wordlist)
