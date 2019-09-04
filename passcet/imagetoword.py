@@ -1,18 +1,37 @@
 # 图片转词汇+释义
+import urllib
+
 from django.http import HttpResponse
 from passcet import settingfile as SF
-from aip import AipOcr
+import requests
+import json
 def imagetoword(request):
     token = request.POST.get('token')
     image = request.POST.get('image')  # IMAGE直接传JPG/PNG 由服务器转换为BASE6
     # testFiled = str(image).encode('utf8')
-    testFiled = bytes(str(image),encoding='utf8')
-    testFiled.decode()
-    print(type(testFiled))
-    print(testFiled)
-    APP_ID= '17173201'
-    API_KEY='pZ9gmceDPZB38yOpZuOtZcOt'
-    SECRET_KEY='Y4EBwVZvcoVVXVZbgjKVuiNmCyHT9gpD'
-    client = AipOcr(APP_ID,API_KEY,SECRET_KEY)
-    print(client.basicGeneral(testFiled))
-    return HttpResponse(SF.PASSCET_101_OK)
+    sendData = {
+        'image': image
+    }
+    headers = {
+        'Content-Type':'application/x-www-form-urlencoded'
+    }
+    sendData = urllib.parse.urlencode(sendData).encode('utf-8')
+    res = requests.post('https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic/?access_token=24.871b8e9b927215274362407024f7a450.2592000.1570160796.282335-17173201', data=sendData, headers=headers)
+    print(res.text)
+    wordlist = process_json(res)
+    wordlist = json.dumps(wordlist)
+    print(type(wordlist))
+    return HttpResponse(wordlist)
+
+def process_json(json_string):
+    # 去掉特殊符号 大写字母 空格 //考虑正则完成
+    wordlist = []
+    json_res = json.loads(json_string.text)
+    word_list = json_res['words_result']
+    for i in word_list:
+        word = i['words']
+        word = word[2:]
+        word = ''.join(word.split())
+        print(word)
+        wordlist.append(word)
+    return wordlist
