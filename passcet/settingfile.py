@@ -1,4 +1,4 @@
-# Powered By Aquarius Engine /Ver BETA/ include Backend OCR IoT
+# Powered By Aquarius Engine /Ver BETA/ include Backend AI IoT
 # 参数设置
 PASSCET_TOKEN = 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW'
 

@@ -7,6 +7,7 @@ import passcet.models
 from passcet import settingfile as SF
 from passcet import takelog
 #author: NsuMicClub-Liguodong
+# http://xxxx:8000/checkcode/?token=asdasda&phoneNumber=asdasdasd&code=asdasdsad
 def checkcode(request):
     token = request.GET.get('token')
     phoneNumber = request.GET.get('phone')

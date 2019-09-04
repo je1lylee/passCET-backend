@@ -30,6 +30,7 @@ from passcet import unbindaccount
 from passcet import addwordlist
 from passcet import delwordlist
 from passcet import getwordlist
+from passcet import imagetoword
 from django.views.static import serve
 
 from untitled import function
@@ -52,4 +53,5 @@ urlpatterns = [
     path('addwordlist/',addwordlist.addwordlist),
     path('delwordlist/',delwordlist.delwordlist),
     path('getwordlist/',getwordlist.getwordlist),
+    path('imagetoword/',imagetoword.imagetoword),
 ]
