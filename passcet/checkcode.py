@@ -56,7 +56,7 @@ def chenkemail(id, code):
                 return HttpResponse(SF.PASSCET_105_CHECK_EMAIL_MESSAGE_OK)
             else:
                 print(time.time()-i.time)
-                take_log(SF.PASSCET_108_BIND_PHONE_SUCCESS)
+                take_log(SF.PASSCET_208_EMAIL_MESSAGE_ERROR)
                 return HttpResponse(SF.PASSCET_208_EMAIL_MESSAGE_ERROR)
     else:
         take_log(SF.PASSCET_209_PHONE_MESSAGE_ID_ERROR)

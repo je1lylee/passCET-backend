@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'passcet',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 IMG_ROOT = os.path.join(BASE_DIR,'static\\img\\')
+'''
+CRONJOBS = [
+    # 表示每过一分钟执行一次
+    ('*/1 * * * *', 'base.utils.task','>> /tmp/testapi_crontab.log')
+]
+'''
