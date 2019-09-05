@@ -49,7 +49,6 @@ def bindaccount(request):
                                 models.passcet_user.objects.filter(phone=phone).update(email = email)
                                 take_log(SF.PASSCET_109_BIND_EMAIL_SUCCESS)
                                 return HttpResponse(SF.PASSCET_109_BIND_EMAIL_SUCCESS)
-
                     else:
                         take_log(SF.PASSCET_202_PARAMETER_ERROR)
                         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)

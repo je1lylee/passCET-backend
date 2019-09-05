@@ -3,7 +3,7 @@ from passcet import checkcode,models,settingfile as SF,register
 from passcet import takelog
 def login(request):
     token = request.POST.get('token')
-    type = request.POST.get('type') #type 0：验证存在并发送验证码 type1：验证验证码并返回结果，同时把用户的ID返回给客户端。
+    type = request.POST.get('type') #type 0：验证存在并发送验证码 type1：验证验证码并返回结果，同时把用户的ID等信息返回给客户端。
     phone = request.POST.get('phone')
     email = request.POST.get('email')
     id = request.POST.get('id')
