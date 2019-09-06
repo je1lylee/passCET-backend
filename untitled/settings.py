@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'passcet',
-    'django_crontab',
 ]
 
 MIDDLEWARE = [
