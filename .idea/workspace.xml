@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/addaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/addaccount.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/checkcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/checkcode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/getuserinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getuserinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/login.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +250,8 @@
       <workItem from="1567643256476" duration="12018000" />
       <workItem from="1567670384133" duration="4041000" />
       <workItem from="1567689838870" duration="3244000" />
-      <workItem from="1567738328733" duration="1969000" />
+      <workItem from="1567738328733" duration="8991000" />
+      <workItem from="1567989806149" duration="1144000" />
     </task>
     <servers />
   </component>

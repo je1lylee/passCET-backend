@@ -12,11 +12,16 @@ def getuserinfo(request):
         if email == None and phone ==None:
             return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
         elif email != None:
-            user_info=models.passcet_user.objects.filter(email=email)
-            return HttpResponse(json.dumps(list(user_info.values())))
+            return getviaemail(email)
         elif phone !=None:
-            user_info = models.passcet_user.objects.filter(phone=phone)
-            return HttpResponse(json.dumps(list(user_info.values())))
+            return getviaphone(phone)
     else:
         return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
     return HttpResponse(SF.PASSCET_101_OK)
+
+def getviaemail(email):
+    user_info = models.passcet_user.objects.filter(email=email)
+    return json.dumps(list(user_info.values()))
+def getviaphone(phone):
+    user_info = models.passcet_user.objects.filter(phone=phone)
+    return json.dumps(list(user_info.values()))
