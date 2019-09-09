@@ -60,5 +60,6 @@ def chenkemail(id, code):
     else:
         take_log(SF.PASSCET_209_PHONE_MESSAGE_ID_ERROR)
         return HttpResponse(SF.PASSCET_209_PHONE_MESSAGE_ID_ERROR)
+
 def take_log(status):
-    takelog('checkcode',status)
+    passcet.takelog.takelog('checkcode',status)

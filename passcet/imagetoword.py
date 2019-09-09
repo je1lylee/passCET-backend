@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from passcet import settingfile as SF
 import requests
 import json
+
 def imagetoword(request):
     token = request.POST.get('token')
     image = request.POST.get('image')  # IMAGE直接传JPG/PNG 由服务器转换为BASE6
