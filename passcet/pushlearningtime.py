@@ -28,7 +28,12 @@ def pushlearningtime(request):
 def processRankList(userid,learningtime):
     try:
         print(userid+'***'+learningtime)
-        # temp = models.passcet_ranklist.objects.filter(userid=userid).
+        temp = models.passcet_ranklist.objects.filter(userid=userid)
+        print("okokok")
+        totaltimet = list(temp.values())[0]['totaltime']
+        print(int(totaltimet)+int(learningtime))
+        temp.totaltime = int(totaltimet)+int(learningtime)
+        temp.save()
     except:
         take_log(SF.PASSCET_213_DB_ERROR)
         return HttpResponse(SF.PASSCET_213_DB_ERROR)
