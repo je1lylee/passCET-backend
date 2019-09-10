@@ -32,6 +32,8 @@ from passcet import delwordlist
 from passcet import getwordlist
 from passcet import imagetoword
 from passcet import getuserinfo
+from passcet import pushlearningtime
+from passcet import getlearningtime
 from django.views.static import serve
 
 from untitled import function
@@ -56,4 +58,6 @@ urlpatterns = [
     path('getwordlist/',getwordlist.getwordlist),
     path('imagetoword/',imagetoword.imagetoword),
     path('getuserinfo/',getuserinfo.getuserinfo),
+    path('pushlearningtime',pushlearningtime.pushlearningtime),
+    path('getlearningtime',getlearningtime.getlearningtime),
 ]
