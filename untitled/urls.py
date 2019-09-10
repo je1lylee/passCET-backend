@@ -58,6 +58,6 @@ urlpatterns = [
     path('getwordlist/',getwordlist.getwordlist),
     path('imagetoword/',imagetoword.imagetoword),
     path('getuserinfo/',getuserinfo.getuserinfo),
-    path('pushlearningtime',pushlearningtime.pushlearningtime),
-    path('getlearningtime',getlearningtime.getlearningtime),
+    path('pushlearningtime/',pushlearningtime.pushlearningtime),
+    path('getlearningtime/',getlearningtime.getlearningtime),
 ]

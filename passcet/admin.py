@@ -33,9 +33,15 @@ class timeAdmin(admin.ModelAdmin):
     search_fields = ['userid']
 
 
+class rankAdmin(admin.ModelAdmin):
+    list_display = ('id','userid','username','totaltime')
+    search_fields = ['userid']
+
+
 admin.site.register(passcet_user, userAdmin)
 admin.site.register(passcet_emailcode, emailcodeAdmin)
 admin.site.register(passcet_word, wordAdmin)
 admin.site.register(passcet_glossary, glossaryAdmin)
 admin.site.register(passcet_log, logAdmin)
 admin.site.register(passcet_time,timeAdmin)
+admin.site.register(passcet_ranklist,rankAdmin)

@@ -57,12 +57,21 @@ class passcet_time(models.Model):
     userid = models.IntegerField(null=False)  # 用户的ID号
     learningtime = models.IntegerField(null=False)  # 用户的本次学习时长
     datetime = models.IntegerField(null=False)  # 用户的学习日期，通过UNIX时间戳存储
+    def __str__(self):
+        return str(self.userid)+'\'s'+str(self.learningtime)
+
+
+class passcet_ranklist(models.Model):
+    userid = models.IntegerField(null=False)
+    username = models.CharField(max_length=128,null=False)
+    totaltime = models.IntegerField(null=False)
+    def __str__(self):
+        return str(self.userid)+'\'s'+str(self.totaltime)
 
 
 class passcet_log(models.Model):
     api_part = models.TextField(max_length=128, null=False)  # 调用API的名字
     status = models.TextField(max_length=128, null=False)
     time = models.TextField(max_length=128, null=False)
-
     def __str__(self):
         return str(self.api_part) + '##' + str(self.status)
