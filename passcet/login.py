@@ -9,8 +9,8 @@ def login(request):
     id = request.POST.get('id')
     code = request.POST.get('code')
     if token == SF.PASSCET_TOKEN and token != None:
-        if type != None and (phone!=None or email != None):
-            if type == '0': #用户是否存在
+        if type != None:
+            if type == '0' and (phone!=None or email != None): #用户是否存在
                 if phone == None:
                     # 处理邮件验证码
                     if len(models.passcet_user.objects.filter(email=email)) == 1:
