@@ -35,6 +35,7 @@ from passcet import getuserinfo
 from passcet import pushlearningtime
 from passcet import getlearningtime
 from django.views.static import serve
+#User System Word Timing
 
 from untitled import function
 urlpatterns = [
@@ -43,21 +44,21 @@ urlpatterns = [
 
     path('polls/', include('polls.urls')),
     # path('login/', login.home),
-    path('heartbeat/' ,passcet.isrunning.home),
-    path('register/',passcet.register.register),
-    path('checkcode/',passcet.checkcode.checkcode),
-    path('addaccount/',passcet.addaccount.addaccount),
-    path('getusericon/',passcet.getusericon.getusericon),
-    path('loginstatuscheck/',passcet.loginstatuscheck.loginstatuscheck),
-    path('login/',login.login),
-    path('bindaccount/',bindaccount.bindaccount),
-    path('getword/',getword.getword),
-    path('unbindaccount/',unbindaccount.unbindaccount),
-    path('addwordlist/',addwordlist.addwordlist),
-    path('delwordlist/',delwordlist.delwordlist),
-    path('getwordlist/',getwordlist.getwordlist),
-    path('imagetoword/',imagetoword.imagetoword),
-    path('getuserinfo/',getuserinfo.getuserinfo),
-    path('pushlearningtime/',pushlearningtime.pushlearningtime),
-    path('getlearningtime/',getlearningtime.getlearningtime),
+    path('system/heartbeat/' ,passcet.isrunning.home),#System
+    path('user/register/',passcet.register.register),# User
+    path('user/checkcode/',passcet.checkcode.checkcode),# User
+    path('user/addaccount/',passcet.addaccount.addaccount),# User
+    path('user/getusericon/',passcet.getusericon.getusericon),# User
+    path('user/loginstatuscheck/',passcet.loginstatuscheck.loginstatuscheck),# User
+    path('user/login/',login.login),# User
+    path('user/bindaccount/',bindaccount.bindaccount),# User
+    path('word/getword/',getword.getword),# Word
+    path('unbindaccount/',unbindaccount.unbindaccount),# 暂缓
+    path('word/addwordlist/',addwordlist.addwordlist),# Word
+    path('word/delwordlist/',delwordlist.delwordlist),# Word
+    path('word/getwordlist/',getwordlist.getwordlist),# Word
+    path('word/imagetoword/',imagetoword.imagetoword),# Word
+    path('user/getuserinfo/',getuserinfo.getuserinfo),# User
+    path('timing/pushlearningtime/',pushlearningtime.pushlearningtime),# Timing
+    path('timing/getlearningtime/',getlearningtime.getlearningtime),# Timing
 ]
