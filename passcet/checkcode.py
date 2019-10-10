@@ -58,8 +58,8 @@ def chenkemail(id, code):
                 take_log(SF.PASSCET_208_EMAIL_MESSAGE_ERROR)
                 return HttpResponse(SF.PASSCET_208_EMAIL_MESSAGE_ERROR)
     else:
-        take_log(SF.PASSCET_209_PHONE_MESSAGE_ID_ERROR)
-        return HttpResponse(SF.PASSCET_209_PHONE_MESSAGE_ID_ERROR)
+        take_log(SF.PASSCET_209_EMAIL_MESSAGE_ID_ERROR)
+        return HttpResponse(SF.PASSCET_209_EMAIL_MESSAGE_ID_ERROR)
 
 def take_log(status):
     passcet.takelog.takelog('checkcode',status)

@@ -9,6 +9,7 @@ from django.conf import settings
 from passcet import settingfile as SF
 from passcet import takelog
 from passcet import getuserinfo
+import json
 # Author:NsuMicClub-Liguodong
 
 # 只有在验证码验证成功的时候才可以调用，这个方法就直接往数据库里写信息了
@@ -47,7 +48,12 @@ def viaEmail(email, leavel, registerTime,name,md5):
     if len(passcet.models.passcet_user.objects.filter(email__exact=email)) == 0: #判断库里是不是已经有了相同的信息
         passcet.models.passcet_user.objects.create(email=email,leavel=leavel,registertime=registerTime,name=name,img_md5=md5)
         take_log(SF.PASSCET_106_REGISTER_SUCCESS + getuserinfo.getviaemail(email))
-        return HttpResponse(getuserinfo.getviaemail(email))
+        resjson = getuserinfo.getviaemail(email)
+        resjson = json.loads(resjson)
+        print(type(resjson[0]))
+        resjson[0].update({"code": "106","status":"成功注册"}) #添加
+        newjson = json.dumps(resjson[0],ensure_ascii=False)
+        return HttpResponse(newjson)
     else:
         take_log(SF.PASSCET_206_DUPLICATE_USER)
         return HttpResponse(SF.PASSCET_206_DUPLICATE_USER)
