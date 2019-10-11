@@ -8,7 +8,7 @@ import json
 
 def imagetoword(request):
     token = request.POST.get('token')
-    image = request.POST.get('image')  # IMAGE直接传JPG/PNG 由服务器转换为BASE6
+    image = request.POST.get('image')
     # testFiled = str(image).encode('utf8')
     sendData = {
         'image': image
@@ -26,6 +26,7 @@ def process_json(json_string):
     wordlist = []
     json_res = json.loads(json_string.text)
     word_list = json_res['words_result']
+    test = '''dasd'''
     for i in word_list:
         word = i['words']
         word = word[2:]
