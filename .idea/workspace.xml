@@ -4,10 +4,21 @@
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getlearningtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getlearningtime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/addaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/addaccount.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/getusericon.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getusericon.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getuserinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getuserinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/imagetoword.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/imagetoword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/getword.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/loginstatuscheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/loginstatuscheck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/takelog.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/takelog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/注册接口.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/注册用户写数据库接口.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/登录接口.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/获取用户头像.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/验证保持登录接口.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/验证码验证接口.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +79,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -291,6 +302,12 @@
       <workItem from="1570686359764" duration="3668000" />
       <workItem from="1570753525084" duration="2062000" />
       <workItem from="1570785233350" duration="2684000" />
+      <workItem from="1570856956456" duration="1573000" />
+      <workItem from="1571054918485" duration="5590000" />
+      <workItem from="1571189006532" duration="599000" />
+      <workItem from="1571230701574" duration="2220000" />
+      <workItem from="1571884088383" duration="1611000" />
+      <workItem from="1571962925716" duration="5986000" />
     </task>
     <servers />
   </component>

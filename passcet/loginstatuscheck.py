@@ -9,6 +9,7 @@ def loginstatuscheck(request):
     id = request.POST.get('id')
     # ctime = request.POST.get('time') #(UNIX时间戳)从安卓本地的存储中返回上一次验证登录的时间如果没有的话就重新登录吧。。
     cimei = request.POST.get('imei')
+    print(token,id,cimei)
     if token == SF.PASSCET_TOKEN and id != None and cimei != None:
             userInfo = models.passcet_user.objects.filter(id=id)
             return checkInfo(userInfo,cimei)

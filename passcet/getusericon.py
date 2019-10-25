@@ -7,7 +7,7 @@ def getusericon(request):
     """
     通过POST获取用户的id号并返回一张图片
     """
-    if(request.POST.get('token')!= None and request.POST.get('token') == SF.PASSCET_TOKEN):
+    if request.POST.get('token')!= None and request.POST.get('token') == SF.PASSCET_TOKEN:
         id = request.POST.get('id')
         imageid = models.passcet_user.objects.filter(id=id) #此处即判断用户ID是否存在
         if len(imageid) != 0:#此处即判断用户ID是否存在

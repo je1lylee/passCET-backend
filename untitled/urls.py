@@ -36,15 +36,22 @@ from passcet import pushlearningtime
 from passcet import getlearningtime
 from django.views.static import serve
 #User System Word Timing
+# 导入辅助函数get_schema_view
+from rest_framework.schemas import get_schema_view
+# 导入两个类
+from rest_framework_swagger.renderers import SwaggerUIRenderer,OpenAPIRenderer
+schema_view = get_schema_view(title='API',renderer_classes=[SwaggerUIRenderer,OpenAPIRenderer])
 
 from untitled import function
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', function.home), #这是启动页面 也就是 http://localhost:port的页面
-
     path('polls/', include('polls.urls')),
+    path('docs/',schema_view,name='docs'),
     # path('login/', login.home),
+    # 测试接口
     path('system/heartbeat/' ,passcet.isrunning.home),#System
+    # 用户相关接口
     path('user/register/',passcet.register.register),# User
     path('user/checkcode/',passcet.checkcode.checkcode),# User
     path('user/addaccount/',passcet.addaccount.addaccount),# User
@@ -52,6 +59,7 @@ urlpatterns = [
     path('user/loginstatuscheck/',passcet.loginstatuscheck.loginstatuscheck),# User
     path('user/login/',login.login),# User
     path('user/bindaccount/',bindaccount.bindaccount),# User
+    # 单词相关接口
     path('word/getword/',getword.getword),# Word
     path('unbindaccount/',unbindaccount.unbindaccount),# 暂缓
     path('word/addwordlist/',addwordlist.addwordlist),# Word
@@ -59,6 +67,8 @@ urlpatterns = [
     path('word/getwordlist/',getwordlist.getwordlist),# Word
     path('word/imagetoword/',imagetoword.imagetoword),# Word
     path('user/getuserinfo/',getuserinfo.getuserinfo),# User
+    # 计时相关接口
     path('timing/pushlearningtime/',pushlearningtime.pushlearningtime),# Timing
     path('timing/getlearningtime/',getlearningtime.getlearningtime),# Timing
+
 ]

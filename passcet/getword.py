@@ -105,4 +105,4 @@ def mainMethod(QueryWord):
             take_log(SF.PASSCET_212_SEARCH_ERROR)
             return SF.PASSCET_212_SEARCH_ERROR
 def take_log(status):
-    takelog.takelog('getword',status)
+    takelog.takelog(__file__,status)

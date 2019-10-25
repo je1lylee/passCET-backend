@@ -1,10 +1,7 @@
 from django.http import HttpResponse
 import time
-import random
 import passcet.models
-import os
 import hashlib
-import filetype
 from django.conf import settings
 from passcet import settingfile as SF
 from passcet import takelog
