@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/addaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/addaccount.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/addwordlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/addwordlist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/bindaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/bindaccount.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -295,7 +292,7 @@
       <workItem from="1571230701574" duration="2220000" />
       <workItem from="1571884088383" duration="1611000" />
       <workItem from="1571962925716" duration="7184000" />
-      <workItem from="1572231192612" duration="6845000" />
+      <workItem from="1572231192612" duration="7102000" />
     </task>
     <servers />
   </component>
