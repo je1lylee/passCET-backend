@@ -3,22 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/addaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/addaccount.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getusericon.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getusericon.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getword.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/loginstatuscheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/loginstatuscheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/takelog.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/takelog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/注册接口.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/注册用户写数据库接口.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/登录接口.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/获取用户头像.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/验证保持登录接口.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/验证码验证接口.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/utils/sendMail.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/utils/sendMail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/utils/sendSms.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/utils/sendSms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/utils/verifiyMailCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/utils/verifiyMailCode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/utils/verifiySmsCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/utils/verifiySmsCode.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -307,7 +295,8 @@
       <workItem from="1571189006532" duration="599000" />
       <workItem from="1571230701574" duration="2220000" />
       <workItem from="1571884088383" duration="1611000" />
-      <workItem from="1571962925716" duration="5986000" />
+      <workItem from="1571962925716" duration="7184000" />
+      <workItem from="1572231192612" duration="1050000" />
     </task>
     <servers />
   </component>

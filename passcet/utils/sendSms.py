@@ -3,6 +3,11 @@ import json
 from django.http import HttpResponse
 from passcet import settingfile as SF
 def sendSMS(phoneNumber):
+    """
+    发送短信验证码
+    :param phoneNumber:
+    :return:
+    """
     url = 'https://api2.bmob.cn/1/requestSmsCode'
     # 处理发送短信的逻辑 返回发送状态
     sendData = {
