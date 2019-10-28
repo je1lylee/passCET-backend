@@ -2,6 +2,7 @@ import requests
 import json
 from django.http import HttpResponse
 from passcet import settingfile as SF
+from passcet.utils.takeLog import takelog
 def sendSMS(phoneNumber):
     """
     发送短信验证码
@@ -23,5 +24,5 @@ def sendSMS(phoneNumber):
     res = requests.post('https://api2.bmob.cn/1/requestSmsCode', data=json.dumps(sendData), headers=headers)
     # return HttpResponse(res.text)
     print(res.text)
-    take_log(SF.PASSCET_102_SEND_PHONE_MESSAGE_OK)
+    takelog(__file__,SF.PASSCET_102_SEND_PHONE_MESSAGE_OK)
     return HttpResponse(SF.PASSCET_102_SEND_PHONE_MESSAGE_OK)

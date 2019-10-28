@@ -5,7 +5,7 @@ import time
 import random
 import passcet.models
 from passcet import settingfile as SF
-from passcet import takelog
+from passcet.utils.takeLog import takelog
 import traceback
 def sendMail(emailAddress):
     """
@@ -24,12 +24,9 @@ def sendMail(emailAddress):
         passcet.models.passcet_emailcode.objects.create(id=id, code=code, time=curlTime)
         send_mail('PassCET-验证邮件', '您的验证码是[' + str(code) + ']，有效期10分钟。如非本人操作,请忽略。', 'passcetapp@163.com', [emailAddress],
                   fail_silently=False)
-        take_log(SF.PASSCET_103_SEND_EMAIL_MESSAGE_OK + str(id) + '"}')
+        takelog(__file__,SF.PASSCET_103_SEND_EMAIL_MESSAGE_OK + str(id) + '"}')
         return HttpResponse(SF.PASSCET_103_SEND_EMAIL_MESSAGE_OK + str(id) + '"}')
     except:
         traceback.print_exc()  # console输出错误信息
-        take_log(SF.PASSCET_204_EMAIL_SEND_FAILED)
+        takelog(__file__,SF.PASSCET_204_EMAIL_SEND_FAILED)
         return HttpResponse(SF.PASSCET_204_EMAIL_SEND_FAILED)
-
-def take_log(filename,status):
-    takelog.takelog(__file__, status)

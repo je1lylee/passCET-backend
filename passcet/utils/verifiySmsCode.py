@@ -5,7 +5,7 @@ import requests
 import time
 import passcet.models
 from passcet import settingfile as SF
-from passcet import takelog
+from passcet.utils.takeLog import takelog
 def verifiySmsCode(phoneNumber, code):
     sendData = {
         'mobilePhoneNumber': phoneNumber
@@ -21,9 +21,9 @@ def verifiySmsCode(phoneNumber, code):
     if 'msg' in json_res:
         if (json_res['msg'] == 'ok'):
             # 返回成功的标志告诉前端执行其他操作
-            take_log(SF.PASSCET_104_CHECK_PHONE_MESSAGE_OK)
+            takelog(__file__,SF.PASSCET_104_CHECK_PHONE_MESSAGE_OK)
             return HttpResponse(SF.PASSCET_104_CHECK_PHONE_MESSAGE_OK)
     else:
         print(res.text)
-        take_log(SF.PASSCET_207_PHONE_MESSAGE_ERROR)
+        takelog(__file__,SF.PASSCET_207_PHONE_MESSAGE_ERROR)
         return HttpResponse(SF.PASSCET_207_PHONE_MESSAGE_ERROR)
