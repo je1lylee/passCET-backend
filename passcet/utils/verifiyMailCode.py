@@ -7,20 +7,19 @@ import passcet.models
 from passcet import settingfile as SF
 from passcet import takelog
 def verifiyMailCode(emailAddress):
-    # 处理发邮件的逻辑 返回发送状态
-    # 生成两个随机数，一个作为ID一个作为Code 加上时间戳 10min 就是10*60=600 sec
-    # 这里可能需要编写一个经常运行的程序来保证验证码表在凌晨两点进行清空
-    curlTime = time.time()
-    id = random.randint(100000, 999999)
-    code = random.randint(100000, 999999)
-    # 需要存入数据库并在验证方法中进行验证
-    try:
-        passcet.models.passcet_emailcode.objects.create(id=id, code=code, time=curlTime)
-        send_mail('PassCET-验证邮件', '您的验证码是[' + str(code) + ']，有效期10分钟。如非本人操作,请忽略。', 'passcetapp@163.com', [emailAddress],
-                  fail_silently=False)
-        take_log(SF.PASSCET_103_SEND_EMAIL_MESSAGE_OK + str(id) + '"}')
-        return HttpResponse(SF.PASSCET_103_SEND_EMAIL_MESSAGE_OK + str(id) + '"}')
-    except:
-        traceback.print_exc()  # console输出错误信息
-        take_log(SF.PASSCET_204_EMAIL_SEND_FAILED)
-        return HttpResponse(SF.PASSCET_204_EMAIL_SEND_FAILED)
+    #  需要验证id和code是否对应,time是否超时.可能要定期删个库啥的。。
+    queryDB = passcet.models.passcet_emailcode.objects.filter(id=id)  # 通过过滤器查询指定的记录
+    print(queryDB.exists())  # 存在值T 不存在F
+    if queryDB.exists():
+        print('在数据库里查询到了结果')
+        for i in queryDB:
+            if str(i.code) == str(code) and time.time() - i.time <= 600:
+                take_log(SF.PASSCET_105_CHECK_EMAIL_MESSAGE_OK)
+                return HttpResponse(SF.PASSCET_105_CHECK_EMAIL_MESSAGE_OK)
+            else:
+                print(time.time() - i.time)
+                take_log(SF.PASSCET_208_EMAIL_MESSAGE_ERROR)
+                return HttpResponse(SF.PASSCET_208_EMAIL_MESSAGE_ERROR)
+    else:
+        take_log(SF.PASSCET_209_EMAIL_MESSAGE_ID_ERROR)
+        return HttpResponse(SF.PASSCET_209_EMAIL_MESSAGE_ID_ERROR)
