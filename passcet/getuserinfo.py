@@ -6,6 +6,11 @@ import json
 
 
 def getuserinfo(request):
+    """
+    获取用户信息
+    :param request:
+    :return:
+    """
     token = request.POST.get('token')
     email = request.POST.get('email')
     phone = request.POST.get('phone')

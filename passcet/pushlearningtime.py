@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from passcet import settingfile as SF
-from passcet import takelog
+from passcet.utils.takeLog import takelog
 from passcet import models
 # 记录用户的学习时间 需要创建time表，对应用户的userid，学习时长和记录的日期。同时写入ranklist库
 def pushlearningtime(request):
@@ -13,16 +13,16 @@ def pushlearningtime(request):
             try:
                 models.passcet_time.objects.create(userid=userid,learningtime=learningtime,datetime=datetime)
                 processRankList(userid,learningtime)
-                take_log(SF.PASSCET_101_OK)
+                takelog(__file__,SF.PASSCET_101_OK)
                 return HttpResponse(SF.PASSCET_101_OK)
             except:
-                take_log(SF.PASSCET_213_DB_ERROR)
+                takelog(__file__,SF.PASSCET_213_DB_ERROR)
                 return HttpResponse(SF.PASSCET_213_DB_ERROR)
         else:
-            take_log(SF.PASSCET_202_PARAMETER_ERROR)
+            takelog(__file__,SF.PASSCET_202_PARAMETER_ERROR)
             return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
     else:
-        take_log(SF.PASSCET_201_TOKEN_ERROR)
+        takelog(__file__,SF.PASSCET_201_TOKEN_ERROR)
         return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
 
 def processRankList(userid,learningtime):
@@ -35,9 +35,5 @@ def processRankList(userid,learningtime):
         temp.totaltime = int(totaltimet)+int(learningtime)
         temp.save()
     except:
-        take_log(SF.PASSCET_213_DB_ERROR)
+        takelog(__file__,SF.PASSCET_213_DB_ERROR)
         return HttpResponse(SF.PASSCET_213_DB_ERROR)
-
-
-def take_log(status):
-    takelog.takelog('pushlearningtime',status)
