@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/checkcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/checkcode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/delwordlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/delwordlist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getlearningtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getlearningtime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getranklist.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getranklist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getusericon.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getusericon.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getuserinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getuserinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getword.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/getwordlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/getwordlist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/imagetoword.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/imagetoword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/loginstatuscheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/loginstatuscheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/pushlearningtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/pushlearningtime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/register.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -305,7 +292,9 @@
       <workItem from="1571230701574" duration="2220000" />
       <workItem from="1571884088383" duration="1611000" />
       <workItem from="1571962925716" duration="7184000" />
-      <workItem from="1572231192612" duration="11209000" />
+      <workItem from="1572231192612" duration="12338000" />
+      <workItem from="1572267564737" duration="241000" />
+      <workItem from="1572272785272" duration="683000" />
     </task>
     <servers />
   </component>
