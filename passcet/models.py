@@ -87,3 +87,8 @@ class passcet_feedback(models.Model):
     phone = models.IntegerField(default=-1)
     email = models.CharField(max_length=128, default=-1)
     feedback = models.TextField(max_length=256, null=False)
+    def __str__(self):
+        if self.phone == -1:
+            return str(self.email)+str(self.feedback)
+        else:
+            return str(self.phone)+str(self.feedback)
