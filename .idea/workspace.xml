@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/checkcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/checkcode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -306,6 +300,8 @@
       <workItem from="1572508824436" duration="5863000" />
       <workItem from="1572568345994" duration="4604000" />
       <workItem from="1572574711166" duration="2304000" />
+      <workItem from="1572849943687" duration="80000" />
+      <workItem from="1572850117673" duration="1514000" />
     </task>
     <servers />
   </component>
