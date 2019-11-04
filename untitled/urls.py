@@ -16,9 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
-from rest_framework_swagger.views import get_swagger_view
 
-schema_view = get_swagger_view(title='Pastebin API')
 from . import login
 from . import heart_beat
 import passcet.isrunning
@@ -43,16 +41,12 @@ from django.views.static import serve
 # 导入辅助函数get_schema_view
 from rest_framework.schemas import get_schema_view
 # 导入两个类
-from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
-schema_view = get_schema_view(title='API',renderer_classes=[SwaggerUIRenderer,OpenAPIRenderer])
 from untitled import function
 app_name = 'rest_framework'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', function.home), #这是启动页面 也就是 http://localhost:port的页面
     path('polls/', include('polls.urls')),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),  # api-auth对应授权登录url
-    path('docs/',schema_view,name='docs'),
     # path('login/', login.home),
     # 测试接口
     path('system/heartbeat/', passcet.isrunning.home),  # System

@@ -53,6 +53,7 @@ class passcet_glossary(models.Model):
         return str(self.user_id) + '\'s' + str(self.word)
 
 
+# 学习时长
 class passcet_time(models.Model):
     userid = models.IntegerField(null=False)  # 用户的ID号
     learningtime = models.IntegerField(null=False)  # 用户的本次学习时长
@@ -62,6 +63,7 @@ class passcet_time(models.Model):
         return str(self.userid) + '\'s' + str(self.learningtime)
 
 
+# 用户排行榜
 class passcet_ranklist(models.Model):
     userid = models.IntegerField(null=False)
     username = models.CharField(max_length=128, null=False)
@@ -71,6 +73,7 @@ class passcet_ranklist(models.Model):
         return str(self.userid) + '\'s' + str(self.totaltime)
 
 
+# 日志系统
 class passcet_log(models.Model):
     api_part = models.TextField(max_length=128, null=False)  # 调用API的名字
     status = models.TextField(max_length=128, null=False)
@@ -78,3 +81,9 @@ class passcet_log(models.Model):
 
     def __str__(self):
         return str(self.api_part) + '##' + str(self.status)
+
+
+class passcet_feedback(models.Model):
+    phone = models.IntegerField(default=-1)
+    email = models.CharField(max_length=128, default=-1)
+    feedback = models.TextField(max_length=256, null=False)

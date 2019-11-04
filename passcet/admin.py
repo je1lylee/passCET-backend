@@ -29,13 +29,18 @@ class logAdmin(admin.ModelAdmin):
 
 
 class timeAdmin(admin.ModelAdmin):
-    list_display = ('id','userid','learningtime','datetime')
+    list_display = ('id', 'userid', 'learningtime', 'datetime')
     search_fields = ['userid']
 
 
 class rankAdmin(admin.ModelAdmin):
-    list_display = ('id','userid','username','totaltime')
+    list_display = ('id', 'userid', 'username', 'totaltime')
     search_fields = ['userid']
+
+
+class feedbackAdmin(admin.ModelAdmin):
+    list_display = ('id', 'phone', 'email', 'feedback')
+    search_fields = ['phone', 'email']
 
 
 admin.site.register(passcet_user, userAdmin)
@@ -43,5 +48,6 @@ admin.site.register(passcet_emailcode, emailcodeAdmin)
 admin.site.register(passcet_word, wordAdmin)
 admin.site.register(passcet_glossary, glossaryAdmin)
 admin.site.register(passcet_log, logAdmin)
-admin.site.register(passcet_time,timeAdmin)
-admin.site.register(passcet_ranklist,rankAdmin)
+admin.site.register(passcet_time, timeAdmin)
+admin.site.register(passcet_ranklist, rankAdmin)
+admin.site.register(passcet_feedback, feedbackAdmin)
