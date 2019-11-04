@@ -30,9 +30,9 @@ def register(request):
                 takelog(__file__,SF.PASSCET_206_DUPLICATE_USER)
                 return HttpResponse(SF.PASSCET_206_DUPLICATE_USER)  # 出现重复的手机号或密码时进行检测
         if phone != 0:  # 如果phone里传过来了参数就发送短信
-            return sendSms(phone)
+            return sendSms.sendSms(phone)
         if email != 0:  # 如果email里传过来了参数就发送电子邮件
-            return sendMail(email)
+            return sendMail.sendMail(email)
     else:
         takelog(__file__,SF.PASSCET_201_TOKEN_ERROR)
         return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)  # token错误

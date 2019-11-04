@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from passcet import checkcode, models, settingfile as SF, register
 from passcet.utils.takeLog import takelog
+from passcet.utils import verifiyMailCode,verifiySmsCode,sendSms,sendMail
 
 
 def login(request):

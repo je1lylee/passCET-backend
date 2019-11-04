@@ -10,9 +10,9 @@ def checkcode(request):
     code = request.GET.get('code')
     if token == SF.PASSCET_TOKEN and code != None:
         if (phoneNumber != None):
-            return verifiySmsCode(phoneNumber, code)
+            return verifiySmsCode.verifiySmsCode(phoneNumber, code)
         elif (id != None):
-            return verifiyMailCode(id, code)
+            return verifiyMailCode.verifiyMailCode(id, code)
     else:
         takelog(__file__,SF.PASSCET_202_PARAMETER_ERROR)
         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
