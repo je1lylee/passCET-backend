@@ -1,7 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
 # 用户
 class passcet_user(models.Model):
     name = models.CharField(max_length=30)  # 昵称 可以为空？
@@ -82,9 +81,10 @@ class passcet_log(models.Model):
     def __str__(self):
         return str(self.api_part) + '##' + str(self.status)
 
-
+# 用户反馈系统
 class passcet_feedback(models.Model):
     phone = models.IntegerField(default=-1)
+    #用户常用的phone/email
     email = models.CharField(max_length=128, default=-1)
     feedback = models.TextField(max_length=256, null=False)
     def __str__(self):

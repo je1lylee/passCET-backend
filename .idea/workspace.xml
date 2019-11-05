@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/addaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/user/addaccount.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/addwordlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/word/addwordlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/bindaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/user/bindaccount.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/checkcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/user/checkcode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/delwordlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/word/delwordlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/getlearningtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/timing/getlearningtime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/getusericon.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/user/getusericon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/getuserinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/word/getuserinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/getword.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/word/getword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/getwordlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/word/getwordlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/imagetoword.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/word/imagetoword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/user/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/loginstatuscheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/user/loginstatuscheck.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/passcet.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/pushlearningtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/timing/pushlearningtime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/user/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/takelog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,9 +87,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PythonLearn\untitled\passcet\timing" />
+      <recent name="D:\PythonLearn\untitled\passcet\word" />
+      <recent name="D:\PythonLearn\untitled\passcet\user" />
       <recent name="D:\PythonLearn\untitled\passcet" />
       <recent name="D:\PythonLearn\untitled" />
-      <recent name="D:\PythonLearn\untitled\static\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -122,7 +142,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/passcet/getuserinfo.py" />
+      <option name="SCRIPT_NAME" value="D:\PythonLearn\untitled\passcet\word\getuserinfo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -302,7 +322,8 @@
       <workItem from="1572568345994" duration="4604000" />
       <workItem from="1572574711166" duration="2304000" />
       <workItem from="1572849943687" duration="80000" />
-      <workItem from="1572850117673" duration="7457000" />
+      <workItem from="1572850117673" duration="7465000" />
+      <workItem from="1572913520774" duration="771000" />
     </task>
     <servers />
   </component>

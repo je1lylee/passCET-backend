@@ -15,31 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls import url
 
-from . import login
-from . import heart_beat
 import passcet.isrunning
-import passcet.register
-import passcet.checkcode
-import passcet.addaccount
-import passcet.getusericon
-import passcet.loginstatuscheck
-from passcet import getword
-from passcet import login
-from passcet import bindaccount
+import passcet.user.register
+import passcet.user.checkcode
+import passcet.user.addaccount
+import passcet.user.getusericon
+import passcet.user.loginstatuscheck
+from passcet.user import login, bindaccount
 from passcet import unbindaccount
-from passcet import addwordlist
-from passcet import delwordlist
-from passcet import getwordlist
-from passcet import imagetoword
-from passcet import getuserinfo
-from passcet import pushlearningtime
-from passcet import getlearningtime
-from django.views.static import serve
+from passcet.word import imagetoword, getwordlist, getuserinfo, addwordlist, getword, delwordlist
+from passcet.timing import pushlearningtime, getlearningtime
 # User System Word Timing
 # 导入辅助函数get_schema_view
-from rest_framework.schemas import get_schema_view
 # 导入两个类
 from untitled import function
 app_name = 'rest_framework'
@@ -51,11 +39,11 @@ urlpatterns = [
     # 测试接口
     path('system/heartbeat/', passcet.isrunning.home),  # System
     # 用户相关接口
-    path('user/register/', passcet.register.register),  # User
-    path('user/checkcode/', passcet.checkcode.checkcode),  # User
-    path('user/addaccount/', passcet.addaccount.addaccount),  # User
-    path('user/getusericon/', passcet.getusericon.getusericon),  # User
-    path('user/loginstatuscheck/', passcet.loginstatuscheck.loginstatuscheck),  # User
+    path('user/register/', passcet.user.register.register),  # User
+    path('user/checkcode/', passcet.user.checkcode.checkcode),  # User
+    path('user/addaccount/', passcet.user.addaccount.addaccount),  # User
+    path('user/getusericon/', passcet.user.getusericon.getusericon),  # User
+    path('user/loginstatuscheck/', passcet.user.loginstatuscheck.loginstatuscheck),  # User
     path('user/login/', login.login),  # User
     path('user/bindaccount/', bindaccount.bindaccount),  # User
     # 单词相关接口

@@ -3,7 +3,7 @@ import json
 from django.http import HttpResponse
 from passcet import settingfile as SF
 from passcet import models
-from passcet import getword
+from passcet.word import getword
 from passcet.utils.takeLog import takelog
 # 添加单词到生词本
 def addwordlist(request):
@@ -24,7 +24,8 @@ def addwordlist(request):
                 return HttpResponse(SF.PASSCET_214_WORD_EUPLICATE)
             else:
                 try:
-                    models.passcet_glossary.objects.create(user_id=userid,word=word,description=json.loads(str(getword.mainMethod(word)))[0]['description'])
+                    models.passcet_glossary.objects.create(user_id=userid, word=word, description=json.loads(str(
+                        getword.mainMethod(word)))[0]['description'])
                     takelog(__file__,SF.PASSCET_110_ADD_GLOSSARY_SUCCESS)
                     return HttpResponse(SF.PASSCET_110_ADD_GLOSSARY_SUCCESS)
                 except:

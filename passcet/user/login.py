@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from passcet import checkcode, models, settingfile as SF, register
+from passcet import models, settingfile as SF
 from passcet.utils.takeLog import takelog
 from passcet.utils import sendMail, sendSms, verifiySmsCode, verifiyMailCode
 

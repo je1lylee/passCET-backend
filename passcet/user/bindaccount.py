@@ -2,8 +2,7 @@ from django.http import HttpResponse
 import json
 from passcet import settingfile as SF
 from passcet import models
-from passcet import register
-from passcet import checkcode
+from passcet.user import register, checkcode
 from passcet.utils.takeLog import takelog
 
 

@@ -5,7 +5,7 @@ import hashlib
 from django.conf import settings
 from passcet import settingfile as SF
 from passcet.utils.takeLog import takelog
-from passcet import getuserinfo
+from passcet.word import getuserinfo
 import json
 
 
