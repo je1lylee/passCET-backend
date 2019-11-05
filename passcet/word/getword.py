@@ -26,6 +26,7 @@ def mainMethod(QueryWord):
         resource_json = requests.get(
             'http://www.iciba.com/index.php?a=getWordMean&c=search&list=1%2C2%2C3%2C4%2C5%2C8%2C9%2C10%2C12%2C13%2C14%2C15%2C18%2C21%2C22%2C24%2C3003%2C3004%2C3005&word=' + QueryWord)
         json_res = json.loads(resource_json.text)  # 转换为dictionary
+        print(json_res)
         try:  # 提前测试返回的json是否正常
             print(json_res['baesInfo']['word_name'])
             print(json_res['baesInfo']['symbols'][0]['ph_en'])
@@ -47,7 +48,8 @@ def mainMethod(QueryWord):
         # 开始存储数据
         if models.passcet_word.objects.filter(word=str(QueryWord)).count():
             models.passcet_word.objects.filter(word=str(QueryWord)).delete()
-        if 'cetFour' and 'cetSix' in json_res:
+        # if 'cetFour' and 'cetSix' in json_res:
+        if json_res.get('cetFour') and json_res.get('cetSix'):
             print('46都存在')
             models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
                                                ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
@@ -58,7 +60,7 @@ def mainMethod(QueryWord):
                                                sentence=json.dumps(json_res['sentence']),
                                                cet4=json.dumps(json_res['cetFour']['count']),
                                                cet6=json.dumps(json_res['cetSix']['count']))
-        elif 'cetFour' in json_res:
+        elif json_res.get('cetFour'):
             print(json_res['cetFour']['count'])
             models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
                                                ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
@@ -68,7 +70,7 @@ def mainMethod(QueryWord):
                                                description=json.dumps(json_res['baesInfo']['symbols'][0]['parts']),
                                                sentence=json.dumps(json_res['sentence']),
                                                cet4=json.dumps(json_res['cetFour']['count']))
-        elif 'cetSix' in json_res:
+        elif json_res.get('cetSix'):
             print(json_res['cetSix']['count'])
             models.passcet_word.objects.create(word=json_res['baesInfo']['word_name'],
                                                ph_en=json_res['baesInfo']['symbols'][0]['ph_en'],
