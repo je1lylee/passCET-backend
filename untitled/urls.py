@@ -15,17 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-import passcet.isrunning
-import passcet.user.register
-import passcet.user.checkcode
-import passcet.user.addaccount
-import passcet.user.getusericon
-import passcet.user.loginstatuscheck
-from passcet.user import login, bindaccount
 from passcet import unbindaccount
+import passcet.isrunning
+
+# 主要模块引入
+from passcet.user import register,checkcode,addaccount,getusericon,loginstatuscheck,login,bindaccount
 from passcet.word import imagetoword, getwordlist, getuserinfo, addwordlist, getword, delwordlist
 from passcet.timing import pushlearningtime, getlearningtime
+from passcet.feedback import pushfeedback
 # User System Word Timing
 # 导入辅助函数get_schema_view
 # 导入两个类
@@ -39,23 +36,26 @@ urlpatterns = [
     # 测试接口
     path('system/heartbeat/', passcet.isrunning.home),  # System
     # 用户相关接口
-    path('user/register/', passcet.user.register.register),  # User
-    path('user/checkcode/', passcet.user.checkcode.checkcode),  # User
-    path('user/addaccount/', passcet.user.addaccount.addaccount),  # User
-    path('user/getusericon/', passcet.user.getusericon.getusericon),  # User
-    path('user/loginstatuscheck/', passcet.user.loginstatuscheck.loginstatuscheck),  # User
-    path('user/login/', login.login),  # User
-    path('user/bindaccount/', bindaccount.bindaccount),  # User
+    path('user/register/', passcet.user.register.register),
+    path('user/checkcode/', passcet.user.checkcode.checkcode),
+    path('user/addaccount/', passcet.user.addaccount.addaccount),
+    path('user/getusericon/', passcet.user.getusericon.getusericon),
+    path('user/loginstatuscheck/', passcet.user.loginstatuscheck.loginstatuscheck),
+    path('user/login/', login.login),
+    path('user/bindaccount/', bindaccount.bindaccount),
     # 单词相关接口
-    path('word/getword/', getword.getword),  # Word
-    path('unbindaccount/', unbindaccount.unbindaccount),  # 暂缓
-    path('word/addwordlist/', addwordlist.addwordlist),  # Word
-    path('word/delwordlist/', delwordlist.delwordlist),  # Word
-    path('word/getwordlist/', getwordlist.getwordlist),  # Word
-    path('word/imagetoword/', imagetoword.imagetoword),  # Word
-    path('user/getuserinfo/', getuserinfo.getuserinfo),  # User
+    path('word/getword/', getword.getword),
+    path('unbindaccount/', unbindaccount.unbindaccount),
+    path('word/addwordlist/', addwordlist.addwordlist),
+    path('word/delwordlist/', delwordlist.delwordlist),
+    path('word/getwordlist/', getwordlist.getwordlist),
+    path('word/imagetoword/', imagetoword.imagetoword),
+    path('user/getuserinfo/', getuserinfo.getuserinfo),
     # 计时相关接口
-    path('timing/pushlearningtime/', pushlearningtime.pushlearningtime),  # Timing
-    path('timing/getlearningtime/', getlearningtime.getlearningtime),  # Timing
+    path('timing/pushlearningtime/', pushlearningtime.pushlearningtime),
+    path('timing/getlearningtime/', getlearningtime.getlearningtime),
+    # 反馈相关接口
+    path('feedback/pushfeedback/',pushfeedback.pushfeedback),
+
 
 ]
