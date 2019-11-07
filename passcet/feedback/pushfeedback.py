@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from passcet.utils import takeLog,sendFeedBackMail
+from passcet.utils import takeLog, sendFeedInfo
 from passcet import settingfile as SF, models
 
 
@@ -16,7 +16,10 @@ def pushfeedback(request):
     if token is not None and token == SF.PASSCET_TOKEN:
         if mail is not None or phone is not None and content is not None:
             # 开始执行逻辑
-            return sendFeedBackMail.sendFeedBackMail(mail,content)
+            if mail is not None:
+                return sendFeedInfo.sendFeedBackViaMail(mail, content)
+            else:
+                return sendFeedInfo.sendFeedBackViaPhone(phone, content)
         else:
             takeLog.takelog(__file__, SF.PASSCET_202_PARAMETER_ERROR)
             return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)

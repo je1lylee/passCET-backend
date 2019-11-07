@@ -6,7 +6,7 @@
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/feedback/pushfeedback.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/feedback/pushfeedback.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passcet/settingfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/settingfile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passcet/utils/sendFeedBackMail.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/utils/sendFeedBackMail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passcet/utils/sendFeedBackMail.py" beforeDir="false" afterPath="$PROJECT_DIR$/passcet/utils/sendFeedInfo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -309,7 +309,8 @@
       <workItem from="1572850117673" duration="7465000" />
       <workItem from="1572913520774" duration="3614000" />
       <workItem from="1573007245729" duration="4480000" />
-      <workItem from="1573022477986" duration="4069000" />
+      <workItem from="1573022477986" duration="4145000" />
+      <workItem from="1573113816080" duration="970000" />
     </task>
     <servers />
   </component>
