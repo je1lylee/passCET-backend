@@ -23,6 +23,7 @@ from passcet.user import register, checkcode, addaccount, getusericon, loginstat
 from passcet.word import imagetoword, getwordlist, getuserinfo, addwordlist, getword, delwordlist, getbriefword
 from passcet.timing import pushlearningtime, getlearningtime
 from passcet.feedback import pushfeedback
+from passcet.system import checkversion
 # User System Word Timing
 # 导入辅助函数get_schema_view
 # 导入两个类
@@ -34,6 +35,8 @@ urlpatterns = [
     path('', function.home),  # 这是启动页面 也就是 http://localhost:port的页面
     path('polls/', include('polls.urls')),
     # path('login/', login.home),
+    #系统接口
+    path('system/checkversion/', passcet.system.checkversion.checkversion),
     # 测试接口
     path('system/heartbeat/', passcet.isrunning.home),  # System
     # 用户相关接口
