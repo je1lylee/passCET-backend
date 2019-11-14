@@ -39,7 +39,7 @@ class rankAdmin(admin.ModelAdmin):
 
 
 class feedbackAdmin(admin.ModelAdmin):
-    list_display = ('id', 'phone', 'email', 'feedback')
+    list_display = ('id', 'phone', 'email', 'feedback','isChecked')
     search_fields = ['phone', 'email']
 
 

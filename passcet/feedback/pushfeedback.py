@@ -6,6 +6,7 @@ from passcet import settingfile as SF, models
 def pushfeedback(request):
     """
     用户反馈接口，获取到反馈信息后发送邮件给管理员
+    当用户同时输入邮箱地址和电话时，会优先选择邮箱
     :param request:
     :return:
     """

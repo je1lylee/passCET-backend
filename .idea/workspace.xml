@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="untitled" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>key</find>
+      <find>md5</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Q7stQnYNa0UgAXlExq0hZIzY4R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PythonLearn\untitled\passcet\timing" />
+      <recent name="D:\PythonLearn\untitled\passcet\word" />
+      <recent name="D:\PythonLearn\untitled\passcet\user" />
+      <recent name="D:\PythonLearn\untitled\passcet" />
+      <recent name="D:\PythonLearn\untitled" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.untitled">
+    <configuration name="getaccesstoken" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/passcet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/passcet/getaccesstoken.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="getuserinfo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/passcet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\PythonLearn\untitled\passcet\word\getuserinfo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/passcet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/passcet/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="untitled" type="Python.DjangoServer" factoryName="Django server">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="untitled.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.getuserinfo" />
+        <item itemvalue="Python.getaccesstoken" />
+        <item itemvalue="Python.tests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1470d847-2583-4979-afa9-b24f9c0d5153" name="Default Changelist" comment="" />
+      <created>1557750019817</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557750019817</updated>
+      <workItem from="1557750023622" duration="3990000" />
+      <workItem from="1557800365080" duration="5789000" />
+      <workItem from="1557922401125" duration="782000" />
+      <workItem from="1558408173057" duration="382000" />
+      <workItem from="1562079397303" duration="1555000" />
+      <workItem from="1562113722248" duration="23220000" />
+      <workItem from="1562162577763" duration="5421000" />
+      <workItem from="1562200278979" duration="21485000" />
+      <workItem from="1562246178971" duration="3767000" />
+      <workItem from="1562286517969" duration="16284000" />
+      <workItem from="1562420623905" duration="598000" />
+      <workItem from="1562581254762" duration="6978000" />
+      <workItem from="1562600480990" duration="2253000" />
+      <workItem from="1562723875015" duration="770000" />
+      <workItem from="1562733494377" duration="2669000" />
+      <workItem from="1562919460539" duration="7430000" />
+      <workItem from="1562943890062" duration="1100000" />
+      <workItem from="1562992129476" duration="1123000" />
+      <workItem from="1563107138764" duration="5579000" />
+      <workItem from="1563178842423" duration="6158000" />
+      <workItem from="1563200783443" duration="4541000" />
+      <workItem from="1563270736940" duration="11145000" />
+      <workItem from="1563361903488" duration="3719000" />
+      <workItem from="1563466460114" duration="417000" />
+      <workItem from="1563531559863" duration="5699000" />
+      <workItem from="1563592816584" duration="5908000" />
+      <workItem from="1563690634146" duration="10068000" />
+      <workItem from="1563769038244" duration="12132000" />
+      <workItem from="1563868961208" duration="11571000" />
+      <workItem from="1563967178518" duration="8423000" />
+      <workItem from="1564060605906" duration="2336000" />
+      <workItem from="1564147392581" duration="58000" />
+      <workItem from="1564227813518" duration="1351000" />
+      <workItem from="1564314132511" duration="4119000" />
+      <workItem from="1564410059864" duration="5581000" />
+      <workItem from="1564660477464" duration="2862000" />
+      <workItem from="1564722582820" duration="1694000" />
+      <workItem from="1564835705494" duration="7528000" />
+      <workItem from="1564917429066" duration="7779000" />
+      <workItem from="1564982850765" duration="6509000" />
+      <workItem from="1565011695765" duration="5482000" />
+      <workItem from="1565090545609" duration="4350000" />
+      <workItem from="1565179055303" duration="3161000" />
+      <workItem from="1565272023430" duration="3316000" />
+      <workItem from="1565432932029" duration="7170000" />
+      <workItem from="1565704627056" duration="57000" />
+      <workItem from="1565704840469" duration="619000" />
+      <workItem from="1565793457239" duration="830000" />
+      <workItem from="1565963447403" duration="109000" />
+      <workItem from="1566041550236" duration="7893000" />
+      <workItem from="1566108917235" duration="7374000" />
+      <workItem from="1566826875024" duration="1874000" />
+      <workItem from="1566866104755" duration="18300000" />
+      <workItem from="1566952021766" duration="17817000" />
+      <workItem from="1566998406961" duration="2959000" />
+      <workItem from="1567039324146" duration="13938000" />
+      <workItem from="1567069670843" duration="2364000" />
+      <workItem from="1567079563276" duration="7257000" />
+      <workItem from="1567132583842" duration="86000" />
+      <workItem from="1567132691669" duration="16000" />
+      <workItem from="1567133191089" duration="227000" />
+      <workItem from="1567133472785" duration="9107000" />
+      <workItem from="1567385067481" duration="344000" />
+      <workItem from="1567386091405" duration="603000" />
+      <workItem from="1567387416496" duration="157000" />
+      <workItem from="1567393138038" duration="12386000" />
+      <workItem from="1567429787533" duration="1588000" />
+      <workItem from="1567432417769" duration="80000" />
+      <workItem from="1567432542094" duration="213000" />
+      <workItem from="1567472020427" duration="4660000" />
+      <workItem from="1567562360634" duration="16162000" />
+      <workItem from="1567601213330" duration="6141000" />
+      <workItem from="1567643256476" duration="12018000" />
+      <workItem from="1567670384133" duration="4041000" />
+      <workItem from="1567689838870" duration="3244000" />
+      <workItem from="1567738328733" duration="8991000" />
+      <workItem from="1567989806149" duration="3448000" />
+      <workItem from="1568013507826" duration="414000" />
+      <workItem from="1568075320331" duration="18386000" />
+      <workItem from="1568122957908" duration="2683000" />
+      <workItem from="1568162945529" duration="7387000" />
+      <workItem from="1568207939497" duration="2055000" />
+      <workItem from="1568251293045" duration="156000" />
+      <workItem from="1568273603794" duration="1078000" />
+      <workItem from="1568704776926" duration="796000" />
+      <workItem from="1569803145248" duration="2016000" />
+      <workItem from="1570589173690" duration="631000" />
+      <workItem from="1570622852141" duration="7319000" />
+      <workItem from="1570670094789" duration="2226000" />
+      <workItem from="1570674233438" duration="870000" />
+      <workItem from="1570686359764" duration="3668000" />
+      <workItem from="1570753525084" duration="2062000" />
+      <workItem from="1570785233350" duration="2684000" />
+      <workItem from="1570856956456" duration="1573000" />
+      <workItem from="1571054918485" duration="5590000" />
+      <workItem from="1571189006532" duration="599000" />
+      <workItem from="1571230701574" duration="2220000" />
+      <workItem from="1571884088383" duration="1611000" />
+      <workItem from="1571962925716" duration="7184000" />
+      <workItem from="1572231192612" duration="12338000" />
+      <workItem from="1572267564737" duration="241000" />
+      <workItem from="1572272785272" duration="683000" />
+      <workItem from="1572332549826" duration="1792000" />
+      <workItem from="1572508824436" duration="5863000" />
+      <workItem from="1572568345994" duration="4604000" />
+      <workItem from="1572574711166" duration="2304000" />
+      <workItem from="1572849943687" duration="80000" />
+      <workItem from="1572850117673" duration="7465000" />
+      <workItem from="1572913520774" duration="3614000" />
+      <workItem from="1573007245729" duration="4480000" />
+      <workItem from="1573022477986" duration="4145000" />
+      <workItem from="1573113816080" duration="5615000" />
+      <workItem from="1573173848503" duration="1923000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/untitled$getuserinfo.coverage" NAME="getuserinfo Coverage Results" MODIFIED="1570787032698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/passcet" />
+    <SUITE FILE_PATH="coverage/untitled$getaccesstoken.coverage" NAME="getaccesstoken Coverage Results" MODIFIED="1567655814437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/passcet" />
+    <SUITE FILE_PATH="coverage/untitled$tests.coverage" NAME="tests Coverage Results" MODIFIED="1562140104735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/passcet" />
+  </component>
+</project>

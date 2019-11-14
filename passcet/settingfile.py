@@ -3,7 +3,7 @@
 PASSCET_TOKEN = 'SMvwlN1kjrtKzIfxCLHlejDedpVSTRvW'
 # 管理员邮箱设置
 PASSCET_ADMIN_EMAIL_LIGUODONG = '908148781@qq.com'
-PASSCET_ADMIN_MAIL_LIANJIE = '3042143991@qq.com'
+PASSCET_ADMIN_EMAIL_LIANJIE = '3042143991@qq.com'
 # 错误返回
 PASSCET_201_TOKEN_ERROR = '{"code":201,"status":"Token错误"}'
 PASSCET_202_PARAMETER_ERROR = '{"code":202,"status":"缺少参数或参数错误"}'

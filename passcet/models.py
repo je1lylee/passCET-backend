@@ -87,6 +87,7 @@ class passcet_feedback(models.Model):
     #用户常用的phone/email
     email = models.CharField(max_length=128, default=-1)
     feedback = models.TextField(max_length=256, null=False)
+    isChecked = models.BooleanField(default=False)
     def __str__(self):
         if self.phone == -1:
             return str(self.email)+str(self.feedback)
