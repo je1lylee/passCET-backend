@@ -26,6 +26,7 @@ def getbriefword(request):
                 json_res = json.loads(resource_json.text)  # 转换为dictionary
                 print(json_res)
                 # noinspection PyBroadException
+                # except需指定异常类型，加上面这句话可以忽略
                 try:  # 提前测试返回的json是否正常
                     print(json_res['baesInfo']['word_name'])
                     print(json_res['baesInfo']['symbols'][0]['ph_en']) #音标

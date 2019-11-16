@@ -22,7 +22,6 @@ def getword(request):
     else:
         return HttpResponse(mainMethod(QueryWord))
 
-
 def mainMethod(QueryWord):
     try:
         testString = ''
