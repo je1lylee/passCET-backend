@@ -71,6 +71,13 @@ class passcet_ranklist(models.Model):
     def __str__(self):
         return str(self.userid) + '\'s' + str(self.totaltime)
 
+# 试题数据
+class passcet_paper(models.Model):
+    problemtype = models.IntegerField(null=False) # 判断四六级
+    problem = models.TextField(null=False) # 题干
+    answer = models.TextField(null=False) # 答案及解析
+    source = models.CharField(default='来源于网络',max_length=256) # 试题来源
+
 
 # 日志系统
 class passcet_log(models.Model):

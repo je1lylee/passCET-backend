@@ -14,7 +14,6 @@ def getwordlist(request):
         takelog(__file__,SF.PASSCET_202_PARAMETER_ERROR)
         return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
     else:
-        print('执行逻辑')
         QuerySett = models.passcet_glossary.objects.filter(user_id=userid) #QuerySet
         takelog(__file__,SF.PASSCET_101_OK)
         return HttpResponse(json.dumps(list(QuerySett.values())))

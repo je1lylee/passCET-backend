@@ -25,7 +25,7 @@ def addwordlist(request):
             else:
                 try:
                     models.passcet_glossary.objects.create(user_id=userid, word=word, description=json.loads(str(
-                        getword.mainMethod(word)))[0]['description'])
+                        getword.mainMethod(word)))[0]['description']) #从getword接口中获取 后期优化从getword.py分离
                     takelog(__file__,SF.PASSCET_110_ADD_GLOSSARY_SUCCESS)
                     return HttpResponse(SF.PASSCET_110_ADD_GLOSSARY_SUCCESS)
                 except:
