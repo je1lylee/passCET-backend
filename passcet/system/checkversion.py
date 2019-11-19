@@ -14,7 +14,7 @@ def checkversion(request):
     version = request.POST.get('version')
     if token is not None and token == SF.PASSCET_TOKEN:
         if version is not None:
-            #开始执行逻辑
+            # 开始执行逻辑
             if version == SF.PASSCET_VERSION:
                 return HttpResponse(SF.PASSCET_113_VERSION_CHECK_OK)
             else:
@@ -23,4 +23,3 @@ def checkversion(request):
             return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
     else:
         return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
-    pass

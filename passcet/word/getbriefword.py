@@ -26,33 +26,33 @@ def getbriefword(request):
             resource_json = requests.get(
                 'http://www.iciba.com/index.php?a=getWordMean&c=search&list=1%2C2%2C3%2C4%2C5%2C8%2C9%2C10%2C12%2C13%2C14%2C15%2C18%2C21%2C22%2C24%2C3003%2C3004%2C3005&word=' + word)
             json_res = json.loads(resource_json.text)  # 转换为dictionary
-            print(json_res) # 这是个字典
+            print(json_res)  # 这是个字典
             # except需指定异常类型，加上面这句话可以忽略
             try:  # 提前测试返回的json是否正常
-                word = {'word_name':json_res['baesInfo']['word_name']}
+                word = {'word_name': json_res['baesInfo']['word_name']}
                 responseDirc.update(word)
-                ph_en = {'ph_en':json_res['baesInfo']['symbols'][0]['ph_en']}
+                ph_en = {'ph_en': json_res['baesInfo']['symbols'][0]['ph_en']}
                 responseDirc.update(ph_en)
-                ph_am = {'ph_an':json_res['baesInfo']['symbols'][0]['ph_am']}
+                ph_am = {'ph_an': json_res['baesInfo']['symbols'][0]['ph_am']}
                 responseDirc.update(ph_am)
-                ph_en_mp3 = {'ph_en_mp3':json_res['baesInfo']['symbols'][0]['ph_en_mp3']}
+                ph_en_mp3 = {'ph_en_mp3': json_res['baesInfo']['symbols'][0]['ph_en_mp3']}
                 responseDirc.update(ph_en_mp3)
-                ph_am_mp3 = {'ph_am_mp3':json_res['baesInfo']['symbols'][0]['ph_am_mp3']}
+                ph_am_mp3 = {'ph_am_mp3': json_res['baesInfo']['symbols'][0]['ph_am_mp3']}
                 responseDirc.update(ph_am_mp3)
                 indexNum = 0
                 for i in json_res['baesInfo']['symbols'][0]['parts']:
-                    temp = {str(indexNum):i}
+                    temp = {str(indexNum): i}
                     responseDirc.update(temp)
-                    indexNum += 1
-                    # print(i)
-                    # testString = testString + json.dumps(i) + ','
+                    indexNum += 1  # 提供K值的填充
+                takelog(__file__, json.dumps(responseDirc))
                 return HttpResponse(json.dumps(responseDirc))
             except:
                 traceback.print_exc()
                 takelog(__file__, SF.PASSCET_211_WORD_ERROR)
                 return SF.PASSCET_211_WORD_ERROR
         else:
+            takelog(__file__,SF.PASSCET_202_PARAMETER_ERROR)
             return HttpResponse(SF.PASSCET_202_PARAMETER_ERROR)
     else:
+        takelog(__file__,SF.PASSCET_201_TOKEN_ERROR)
         return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
-    return HttpResponse(SF.PASSCET_101_OK)

@@ -75,21 +75,23 @@ class passcet_ranklist(models.Model):
 # 日志系统
 class passcet_log(models.Model):
     api_part = models.TextField(max_length=128, null=False)  # 调用API的名字
-    status = models.TextField(max_length=128, null=False)
+    status = models.TextField(max_length=128, null=False)  # API返回的状态码
     time = models.TextField(max_length=128, null=False)
 
     def __str__(self):
         return str(self.api_part) + '##' + str(self.status)
 
+
 # 用户反馈系统
 class passcet_feedback(models.Model):
     phone = models.IntegerField(default=-1)
-    #用户常用的phone/email
+    # 用户常用的phone/email
     email = models.CharField(max_length=128, default=-1)
     feedback = models.TextField(max_length=256, null=False)
     isChecked = models.BooleanField(default=False)
+
     def __str__(self):
         if self.phone == -1:
-            return str(self.email)+str(self.feedback)
+            return str(self.email) + str(self.feedback)
         else:
-            return str(self.phone)+str(self.feedback)
+            return str(self.phone) + str(self.feedback)
