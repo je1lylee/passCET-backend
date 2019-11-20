@@ -42,6 +42,10 @@ class feedbackAdmin(admin.ModelAdmin):
     list_display = ('id', 'phone', 'email', 'feedback','isChecked')
     search_fields = ['phone', 'email']
 
+class paperAdmin(admin.ModelAdmin):
+    list_display = ('id','cetype','problemtype','year','problem','answer','source')
+    search_fields = ['year']
+
 
 admin.site.register(passcet_user, userAdmin)
 admin.site.register(passcet_emailcode, emailcodeAdmin)
@@ -51,3 +55,4 @@ admin.site.register(passcet_log, logAdmin)
 admin.site.register(passcet_time, timeAdmin)
 admin.site.register(passcet_ranklist, rankAdmin)
 admin.site.register(passcet_feedback, feedbackAdmin)
+admin.site.register(passcet_paper,paperAdmin)
