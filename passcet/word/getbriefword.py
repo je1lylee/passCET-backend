@@ -26,7 +26,6 @@ def getbriefword(request):
             resource_json = requests.get(
                 'http://www.iciba.com/index.php?a=getWordMean&c=search&list=1%2C2%2C3%2C4%2C5%2C8%2C9%2C10%2C12%2C13%2C14%2C15%2C18%2C21%2C22%2C24%2C3003%2C3004%2C3005&word=' + word)
             json_res = json.loads(resource_json.text)  # 转换为dictionary
-            print(json_res)  # 这是个字典
             try:  # 提前测试返回的json是否正常
                 word = {'word_name': json_res['baesInfo']['word_name']}
                 responseDirc.update(word)
@@ -40,14 +39,16 @@ def getbriefword(request):
                 responseDirc.update(ph_am_mp3)
                 indexNum = 0
                 for i in json_res['baesInfo']['symbols'][0]['parts']:
+                    print(type(i.get('means')))
                     temp = {str(indexNum): i}
                     responseDirc.update(temp)
                     indexNum += 1  # 提供K值的填充
+                num = {'num':indexNum}
+                responseDirc.update(num)
                 takelog(__file__, json.dumps(responseDirc))
                 return HttpResponse(json.dumps(responseDirc))
             except:
                 traceback.print_exc()
-
                 takelog(__file__, SF.PASSCET_211_WORD_ERROR)
                 return SF.PASSCET_211_WORD_ERROR
         else:
