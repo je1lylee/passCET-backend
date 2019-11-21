@@ -22,6 +22,7 @@ import passcet.isrunning
 from passcet.user import register, checkcode, addaccount, getusericon, loginstatuscheck, login, bindaccount
 from passcet.word import imagetoword, getwordlist, getuserinfo, addwordlist, getword, delwordlist, getbriefword
 from passcet.timing import pushlearningtime, getlearningtime
+from passcet.exam import imagetopaper
 from passcet.feedback import pushfeedback
 from passcet.system import checkversion
 # User System Word Timing
@@ -55,6 +56,8 @@ urlpatterns = [
     path('word/getwordlist/', getwordlist.getwordlist),
     path('word/imagetoword/', imagetoword.imagetoword),
     path('word/getbriefword/', getbriefword.getbriefword),
+    #扫试卷相关接口
+    path('exam/imagetopaper/',imagetopaper.imagetopaper),
     # 计时相关接口
     path('timing/pushlearningtime/', pushlearningtime.pushlearningtime),
     path('timing/getlearningtime/', getlearningtime.getlearningtime),
