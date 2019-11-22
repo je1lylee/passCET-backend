@@ -69,7 +69,7 @@ def viaEmail(email, leavel, registerTime, name, md5):
     if len(passcet.models.passcet_user.objects.filter(email__exact=email)) == 0:  # 判断库里是不是已经有了相同的信息
         passcet.models.passcet_user.objects.create(email=email, leavel=leavel, registertime=registerTime, name=name,
                                                    img_md5=md5)
-        takelog(SF.PASSCET_106_REGISTER_SUCCESS + getuserinfo.getviaemail(email))
+        takelog(__file__,SF.PASSCET_106_REGISTER_SUCCESS + getuserinfo.getviaemail(email))
         resjson = getuserinfo.getviaemail(email)
         resjson = json.loads(resjson)
         print(type(resjson[0]))
