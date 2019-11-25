@@ -18,7 +18,7 @@ def sendFeedBackViaMail(mailaddress, feedbackcontent):
     try:
         send_mail('PassCET-用户反馈信息', '邮箱地址为' + mailaddress + '的用户提交了内容为[' + feedbackcontent + ']的反馈，请及时处理并向用户反馈！',
                   'passcetapp@163.com',
-                  [SF.PASSCET_ADMIN_EMAIL_LIGUODONG, SF.PASSCET_ADMIN_MAIL_LIANJIE],
+                  [SF.PASSCET_ADMIN_EMAIL_LIGUODONG, SF.PASSCET_ADMIN_EMAIL_LIANJIE],
                   fail_silently=False)  # Fail silently 错误是否要提示？
         takelog(__file__, SF.PASSCET_112_FEED_BACK_EMAIL_SEND_SUCCESS)
         return HttpResponse(SF.PASSCET_112_FEED_BACK_EMAIL_SEND_SUCCESS)
