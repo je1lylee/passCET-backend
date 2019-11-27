@@ -18,7 +18,7 @@ def getuserinfo(request):
         if email != None:
             return HttpResponse(getviaemail(email))
         elif phone != None:
-            return getviaphone((phone))
+            return HttpResponse(getviaphone(phone))
     else:
         return HttpResponse(SF.PASSCET_201_TOKEN_ERROR)
 
