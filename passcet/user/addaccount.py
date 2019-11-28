@@ -52,7 +52,7 @@ def viaPhone(phone, leavel, registerTime, name, md5):
         takelog(__file__, SF.PASSCET_106_REGISTER_SUCCESS + getuserinfo.getviaphone(phone))
         return HttpResponse(getuserinfo.getviaphone(phone))
     else:
-        takelog(SF.PASSCET_206_DUPLICATE_USER)
+        takelog(__file__,SF.PASSCET_206_DUPLICATE_USER)
         return HttpResponse(SF.PASSCET_206_DUPLICATE_USER)
 
 
@@ -77,7 +77,7 @@ def viaEmail(email, leavel, registerTime, name, md5):
         newjson = json.dumps(resjson[0], ensure_ascii=False)
         return HttpResponse(newjson)
     else:
-        takelog(SF.PASSCET_206_DUPLICATE_USER)
+        takelog(__file__,SF.PASSCET_206_DUPLICATE_USER)
         return HttpResponse(SF.PASSCET_206_DUPLICATE_USER)
 
 
