@@ -27,7 +27,7 @@ def imagetopaper(request):
             }
             sendData = urllib.parse.urlencode(sendData).encode('utf-8')
             res = requests.post(
-                'https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic/?access_token=24.bc474b328d8b28ecd81caa80044fa343.2592000.1574841349.282335-17173201',
+                'https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic/?access_token=24.76322b8bb87c553728bffbf0baa19c8e.2592000.1577497316.282335-17173201',
                 data=sendData, headers=headers)
             LoJson = json.loads(res.text)
             count = LoJson.get("words_result_num")
