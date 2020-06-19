@@ -11,8 +11,8 @@ def verifiySmsCode(phoneNumber, code):
         'mobilePhoneNumber': phoneNumber
     }
     headers = {
-        'X-Bmob-Application-Id': '2a26931e1a16ae43b9a3ba96735606f2',
-        'X-Bmob-REST-API-Key': '1b6d994b79583ea0e41bb98c2083f021',
+        'X-Bmob-Application-Id': 'x',
+        'X-Bmob-REST-API-Key': 'x',
         'Content-Type': 'application/json',
         'Cache-Control': 'no-cache'
     }
