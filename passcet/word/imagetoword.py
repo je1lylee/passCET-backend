@@ -17,7 +17,7 @@ def imagetoword(request):
         'Content-Type':'application/x-www-form-urlencoded'
     }
     sendData = urllib.parse.urlencode(sendData).encode('utf-8')
-    res = requests.post('https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic/?access_token=24.76322b8bb87c553728bffbf0baa19c8e.2592000.1577497316.282335-17173201', data=sendData, headers=headers)
+    res = requests.post('https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic/?access_token=x', data=sendData, headers=headers)
     print(res.text)
     return HttpResponse(process_json(res))
 
